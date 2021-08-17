@@ -607,11 +607,11 @@ class Character extends FlxSprite
 
 				case 'monika':
 				frames = Paths.getSparrowAtlas('characters/monika');
-				animation.addByPrefix('idle', 'Monika Idle', 24, false);
-				animation.addByPrefix('singUP', 'Monika UP NOTE', 24, false);
-				animation.addByPrefix('singLEFT', 'Monika LEFT NOTE', 24, false);
-				animation.addByPrefix('singRIGHT', 'Monika RIGHT NOTE', 24, false);
-				animation.addByPrefix('singDOWN', 'Monika DOWN NOTE', 24, false);
+				animation.addByPrefix('idle', 'MonikaIdle', 24, true);
+				animation.addByPrefix('singUP', 'MonikaUp', 12, false);
+				animation.addByPrefix('singLEFT', 'MonikaLeft', 12, false);
+				animation.addByPrefix('singRIGHT', 'MonikaRight', 12, false);
+				animation.addByPrefix('singDOWN', 'MonikaDown', 12, false);
 
 				animation.addByPrefix('idle-alt', 'Angry Senpai Idle', 24, false);
 				animation.addByPrefix('singUP-alt', 'Angry Senpai UP NOTE', 24, false);
@@ -619,11 +619,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT-alt', 'Angry Senpai LEFT NOTE', 24, false);
 				animation.addByPrefix('singRIGHT-alt', 'Angry Senpai RIGHT NOTE', 24, false);
 
-				addOffset('idle');
-				addOffset("singUP", 5, 37);
+				addOffset('idle', 15, -200);
+				addOffset("singUP", 5, -237);
 				addOffset("singRIGHT");
-				addOffset("singLEFT", 40);
-				addOffset("singDOWN", 14);
+				addOffset("singLEFT", 40, -200);
+				addOffset("singDOWN", 14, -200);
 
 				addOffset('idle-alt');
 				addOffset("singUP-alt", 5, 37);
@@ -633,7 +633,8 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
-				setGraphicSize(Std.int(width * 6));
+				setGraphicSize(Std.int(width / 2));
+				setGraphicSize(Std.int(height / 2));
 				updateHitbox();
 
 				antialiasing = false;

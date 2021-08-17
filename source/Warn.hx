@@ -1,4 +1,4 @@
-package;
+package x;
 
 
 import flixel.FlxG;
@@ -37,10 +37,10 @@ import sys.thread.Thread;
 
 using StringTools;
 
-class warn
+class Warn
     {
-        function warning()
-            {
+
+        var warning:FlxSprite;
 
                 warning = new FlxSprite();
                 warning.frames = Paths.getSparrowAtlas('MenuWarn');
@@ -49,6 +49,5 @@ class warn
                 warning.animation.play('idle');
                 add(warning);
 
-            }
         
     }

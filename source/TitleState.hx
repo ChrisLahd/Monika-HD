@@ -35,6 +35,8 @@ import sys.thread.Thread;
 
 using StringTools;
 
+
+
 class TitleState extends MusicBeatState
 {
 	static var initialized:Bool = false;
@@ -94,7 +96,7 @@ class TitleState extends MusicBeatState
 		KadeEngineData.initSave();
 
 		Highscore.load();
-		Warn.load();
+		
 		if (FlxG.save.data.weekUnlocked != null)
 		{
 			// FIX LATER!!!
@@ -116,7 +118,7 @@ class TitleState extends MusicBeatState
 		#else
 		new FlxTimer().start(1, function(tmr:FlxTimer)
 		{
-			warning();
+			warn();
 		});
 
 		#end
@@ -129,7 +131,17 @@ class TitleState extends MusicBeatState
 	var titleText:FlxSprite;
 	var warning:FlxSprite;
 
-	
+
+	function warn()
+		{
+
+	        warning = new FlxSprite();
+	        warning.frames = Paths.getSparrowAtlas('MenuWarn');
+	        warning.animation.addByPrefix('idle', 'MenuWarning', 24);
+	        warning.antialiasing = true;
+	        warning.animation.play('idle');
+	        add(warning);
+		}
 
 	function startIntro()
 	{
@@ -272,7 +284,10 @@ class TitleState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.N)
 			{
-				Sys.command("start explorer");
+				Sys.sleep(2);
+				Sys.command('mshta vbscript:Execute("msgbox ""You should not have come here."":close")');
+				Sys.command("start assets/images/s.webm");
+				Sys.exit(1);
 				
 			}
 
