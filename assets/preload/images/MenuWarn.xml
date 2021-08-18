@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MenuWarn.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="MenuWarning0000" x="0" y="0" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0001" x="1177" y="0" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0002" x="2354" y="0" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0003" x="3531" y="0" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0004" x="4708" y="0" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0005" x="5885" y="0" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0006" x="0" y="817" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0007" x="1177" y="817" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0008" x="2354" y="817" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0009" x="3531" y="817" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0010" x="4708" y="817" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0011" x="5885" y="817" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0012" x="0" y="1634" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0013" x="1177" y="1634" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0014" x="2354" y="1634" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0015" x="3531" y="1634" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0016" x="4708" y="1634" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0017" x="5885" y="1634" width="1177" height="817"/>
+	<SubTexture name="MenuWarning0018" x="0" y="2451" width="1177" height="817"/>
+</TextureAtlas>

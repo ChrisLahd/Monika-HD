@@ -596,11 +596,11 @@ class PlayState extends MusicBeatState
 					bgStreet.scrollFactor.set(0.95, 0.95);
 					add(bgStreet);
 
-					var fgTrees:FlxSprite = new FlxSprite(repositionShit + 170, 130).loadGraphic(Paths.image('weeb/weebTreesBack','week6'));
+					var fgTrees:FlxSprite = new FlxSprite(repositionShit + 190, 130).loadGraphic(Paths.image('weeb/weebTreesBack','week6'));
 					fgTrees.scrollFactor.set(0.9, 0.9);
 					add(fgTrees);
 
-					var bgTrees:FlxSprite = new FlxSprite(repositionShit - 380, -800);
+					var bgTrees:FlxSprite = new FlxSprite(repositionShit - 160, -800);
 					var treetex = Paths.getPackerAtlas('weeb/weebTrees','week6');
 					bgTrees.frames = treetex;
 					bgTrees.animation.add('treeLoop', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], 12);
@@ -620,8 +620,8 @@ class PlayState extends MusicBeatState
 					bgSky.setGraphicSize(widShit);
 					bgSchool.setGraphicSize(widShit);
 					bgStreet.setGraphicSize(widShit);
-					bgTrees.setGraphicSize(Std.int(widShit * 1.4));
-					fgTrees.setGraphicSize(Std.int(widShit * 0.8));
+					bgTrees.setGraphicSize(Std.int(widShit * 1.19));
+					fgTrees.setGraphicSize(Std.int(widShit * 0.6));
 					treeLeaves.setGraphicSize(widShit);
 
 					fgTrees.updateHitbox();
@@ -789,9 +789,9 @@ class PlayState extends MusicBeatState
 				dad.y += 360;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'monika':
-				dad.x += 150;
+				dad.x += 250;
 				dad.y += 360;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y - 330);
 			case 'duet':
 				dad.x += 150;
 				dad.y += 380;
@@ -2304,7 +2304,7 @@ class PlayState extends MusicBeatState
 						camFollow.x = dad.getMidpoint().x - 100;
 					case 'monika':
 						camFollow.y = dad.getMidpoint().y - 430;
-						camFollow.x = dad.getMidpoint().x - 100;
+						camFollow.x = dad.getMidpoint().x + 150;
 					case 'duet':
 						camFollow.y = dad.getMidpoint().y - 400;
 						camFollow.x = dad.getMidpoint().x + 0;

@@ -109,16 +109,15 @@ class Character extends FlxSprite
 			case 'gf-pixel':
 				tex = Paths.getSparrowAtlas('characters/gfPixel');
 				frames = tex;
-				animation.addByIndices('singUP', 'GF IDLE', [2], "", 24, false);
 				animation.addByIndices('danceLeft', 'GF IDLE', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 				animation.addByIndices('danceRight', 'GF IDLE', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 
-				addOffset('danceLeft', 0);
-				addOffset('danceRight', 0);
+				addOffset('danceLeft', 390, 450);
+				addOffset('danceRight', 390, 450);
 
 				playAnim('danceRight');
 
-				setGraphicSize(Std.int(width * PlayState.daPixelZoom));
+				setGraphicSize(Std.int(width / 1.3 + PlayState.daPixelZoom));
 				updateHitbox();
 				antialiasing = false;
 
@@ -392,29 +391,29 @@ class Character extends FlxSprite
 				flipX = true;
 			case 'bf-pixel':
 				frames = Paths.getSparrowAtlas('characters/bfPixel');
-				animation.addByPrefix('idle', 'BF IDLE', 24, false);
-				animation.addByPrefix('singUP', 'BF UP NOTE', 24, false);
-				animation.addByPrefix('singLEFT', 'BF LEFT NOTE', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF RIGHT NOTE', 24, false);
-				animation.addByPrefix('singDOWN', 'BF DOWN NOTE', 24, false);
-				animation.addByPrefix('singUPmiss', 'BF UP MISS', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF RIGHT MISS', 24, false);
-				animation.addByPrefix('singDOWNmiss', 'BF DOWN MISS', 24, false);
-				animation.addByPrefix('peaceSIGN', 'BF PEACE', 24, false);
+				animation.addByPrefix('idle', 'Idle', 24, false);
+				animation.addByPrefix('singUP', 'Sing Up', 24, false);
+				animation.addByPrefix('singLEFT', 'Sing Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Sing Right', 24, false);
+				animation.addByPrefix('singDOWN', 'Sing Down', 24, false);
+				animation.addByPrefix('singUPmiss', 'Miss Up', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'Miss Left', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'Miss Right', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'Miss Down', 24, false);
+				animation.addByPrefix('peaceSIGN', 'BF HEY!!', 24, false);
 
-				addOffset('idle');
-				addOffset("singUP");
-				addOffset("singRIGHT");
-				addOffset("singLEFT");
-				addOffset("singDOWN");
-				addOffset("singUPmiss");
-				addOffset("singRIGHTmiss");
-				addOffset("singLEFTmiss");
-				addOffset("singDOWNmiss");
-				addOffset("peaceSIGN");
+				addOffset('idle', 50, 330);
+				addOffset("singUP", 160, 455);
+				addOffset("singRIGHT", 0, 190);
+				addOffset("singLEFT", 160, 360);
+				addOffset("singDOWN", 0, 200);
+				addOffset("singUPmiss", 150, 360);
+				addOffset("singRIGHTmiss", 50, 230);
+				addOffset("singLEFTmiss", 50, 330);
+				addOffset("singDOWNmiss", 50, 330);
+				addOffset("peaceSIGN", 50, 330);
 
-				setGraphicSize(Std.int(width * 6));
+				setGraphicSize(Std.int(width * 0.86));
 				updateHitbox();
 
 				playAnim('idle');
@@ -422,7 +421,7 @@ class Character extends FlxSprite
 				width -= 100;
 				height -= 100;
 
-				antialiasing = false;
+				antialiasing = true;
 
 				flipX = true;
 			case 'bf-pixelangry':
@@ -459,11 +458,11 @@ class Character extends FlxSprite
 	
 					flipX = true;
 			case 'bf-pixel-dead':
-				frames = Paths.getSparrowAtlas('characters/bfPixelsDEAD');
+				frames = Paths.getSparrowAtlas('characters/bfPixel');
 				animation.addByPrefix('singUP', "BF Dies pixel", 24, false);
-				animation.addByPrefix('firstDeath', "BF Dies pixel", 24, false);
-				animation.addByPrefix('deathLoop', "Retry Loop", 24, true);
-				animation.addByPrefix('deathConfirm', "RETRY CONFIRM", 24, false);
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
 				animation.play('firstDeath');
 
 				addOffset('firstDeath');
@@ -619,11 +618,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT-alt', 'Angry Senpai LEFT NOTE', 24, false);
 				animation.addByPrefix('singRIGHT-alt', 'Angry Senpai RIGHT NOTE', 24, false);
 
-				addOffset('idle', 15, -200);
-				addOffset("singUP", 5, -237);
-				addOffset("singRIGHT");
-				addOffset("singLEFT", 40, -200);
-				addOffset("singDOWN", 14, -200);
+				addOffset('idle', 200, 370);
+				addOffset("singUP", 200, 377);
+				addOffset("singRIGHT", 200, 370);
+				addOffset("singLEFT", 200, 370);
+				addOffset("singDOWN", 204, 370);
 
 				addOffset('idle-alt');
 				addOffset("singUP-alt", 5, 37);
@@ -633,11 +632,11 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
-				setGraphicSize(Std.int(width / 2));
-				setGraphicSize(Std.int(height / 2));
+				setGraphicSize(Std.int(width / 1.9));
+				setGraphicSize(Std.int(height / 1.9));
 				updateHitbox();
 
-				antialiasing = false;
+				antialiasing = true;
 			
 				//Duet_Assets
 			case 'duet':
