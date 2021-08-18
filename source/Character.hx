@@ -678,16 +678,17 @@ class Character extends FlxSprite
 
 			case 'monika-angry':
 				frames = Paths.getSparrowAtlas('characters/Monika_Finale');
-				animation.addByPrefix('idle', 'MONIKA IDLE', 24, false);
-				animation.addByPrefix('singUP', 'MONIKA UP NOTE', 24, false);
-				animation.addByPrefix('singLEFT', 'MONIKA LEFT NOTE', 24, false);
-				animation.addByPrefix('singRIGHT', 'MONIKA RIGHT NOTE', 24, false);
-				animation.addByPrefix('singDOWN', 'MONIKA DOWN NOTE', 24, false);
+				animation.addByPrefix('idle', 'BigmonIdle', 24, false);
+				animation.addByPrefix('singUP', 'BigmonUp', 24, false);
+				animation.addByPrefix('singLEFT', 'BigmonLeft', 24, false);
+				animation.addByPrefix('singRIGHT', 'BigmonRight', 24, false);
+				animation.addByPrefix('singDOWN', 'BigmonDown', 24, false);
 
 				
 				addOffset('danceLeft');
 				addOffset('danceRight');
 
+				addOffset("idle", 400, 500);
 				addOffset("singUP");
 				addOffset("singRIGHT");
 				addOffset("singLEFT");
@@ -700,10 +701,10 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
-				setGraphicSize(Std.int(width * 6));
+				setGraphicSize(Std.int(width * 0.8));
 				updateHitbox();
 
-				antialiasing = false;
+				antialiasing = true;
 		
 
 	//	case 'monika-glitch':
@@ -726,7 +727,7 @@ class Character extends FlxSprite
 //
 	//		antialiasing = true;
 //
-	//	}
+		}
 
 
 		dance();
