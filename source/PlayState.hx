@@ -3720,7 +3720,7 @@ class PlayState extends MusicBeatState
 										}
 							});
 					
-					case 889:
+					case 3521:
 						FlxG.camera.fade(FlxColor.BLACK, 2, false);
 				}
 			}
