@@ -648,7 +648,7 @@ class PlayState extends MusicBeatState
 			case 'schoolEvil':
 			{
 					curStage = 'schoolEvil';
-					defaultCamZoom = 0.5;
+					defaultCamZoom = 0.9;
 
 					var posX = 50;
 					var posY = 200;

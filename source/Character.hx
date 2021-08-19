@@ -688,11 +688,11 @@ class Character extends FlxSprite
 				addOffset('danceLeft');
 				addOffset('danceRight');
 
-				addOffset("idle", 400, 500);
-				addOffset("singUP");
-				addOffset("singRIGHT");
-				addOffset("singLEFT");
-				addOffset("singDOWN");
+				addOffset("idle", 500, 480);
+				addOffset("singUP", 500, 480);
+				addOffset("singRIGHT", 500, 480);
+				addOffset("singLEFT", 500, 480);
+				addOffset("singDOWN", 500, 480);
 
 				//addOffset("singUP-alt", 60, -6);
 				//addOffset("singRIGHT-alt", 60, -6);
@@ -701,7 +701,7 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
-				setGraphicSize(Std.int(width * 0.8));
+				setGraphicSize(Std.int(width * 0.9));
 				updateHitbox();
 
 				antialiasing = true;
