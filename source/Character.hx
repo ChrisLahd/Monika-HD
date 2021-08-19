@@ -679,20 +679,20 @@ class Character extends FlxSprite
 			case 'monika-angry':
 				frames = Paths.getSparrowAtlas('characters/Monika_Finale');
 				animation.addByPrefix('idle', 'BigmonIdle', 24, false);
-				animation.addByPrefix('singUP', 'BigmonUp', 24, false);
-				animation.addByPrefix('singLEFT', 'BigmonLeft', 24, false);
-				animation.addByPrefix('singRIGHT', 'BigmonRight', 24, false);
-				animation.addByPrefix('singDOWN', 'BigmonDown', 24, false);
+				animation.addByPrefix('singUP', 'BigmonUp', 12, false);
+				animation.addByPrefix('singLEFT', 'BigmonLeft', 12, false);
+				animation.addByPrefix('singRIGHT', 'BigmonRight', 12, false);
+				animation.addByPrefix('singDOWN', 'BigmonDown', 12, false);
 
 				
 				addOffset('danceLeft');
 				addOffset('danceRight');
 
-				addOffset("idle", 500, 480);
-				addOffset("singUP", 500, 480);
-				addOffset("singRIGHT", 500, 480);
-				addOffset("singLEFT", 500, 480);
-				addOffset("singDOWN", 500, 480);
+				addOffset("idle", 500, 579);
+				addOffset("singUP", 500, 579);
+				addOffset("singRIGHT", 500, 535);
+				addOffset("singLEFT", 500, 577);
+				addOffset("singDOWN", 485, 550);
 
 				//addOffset("singUP-alt", 60, -6);
 				//addOffset("singRIGHT-alt", 60, -6);
