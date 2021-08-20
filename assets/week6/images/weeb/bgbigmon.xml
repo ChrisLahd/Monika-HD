@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bgbigmon.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BGThirdIdle0000" x="0" y="0" width="1680" height="944"/>
+        <SubTexture name="BGThirdIdle0001" x="0" y="0" width="1680" height="944"/>
+        <SubTexture name="BGThirdIdle0002" x="0" y="0" width="1680" height="944"/>
+        <SubTexture name="BGThirdIdle0003" x="0" y="0" width="1680" height="944"/>
+        <SubTexture name="BGThirdIdle0004" x="0" y="0" width="1680" height="944"/>
+        <SubTexture name="BGThirdIdle0005" x="0" y="0" width="1680" height="944"/>
+	<SubTexture name="BGThirdIdle0006" x="1680" y="0" width="1680" height="944"/>
+	<SubTexture name="BGThirdIdle0007" x="3360" y="0" width="1680" height="944"/>
+	<SubTexture name="BGThirdIdle0008" x="5040" y="0" width="1680" height="944"/>
+	<SubTexture name="BGThird0000" x="0" y="944" width="1680" height="944"/>
+	<SubTexture name="BGThird0001" x="1680" y="944" width="1680" height="944"/>
+	<SubTexture name="BGThird0002" x="3360" y="944" width="1680" height="944"/>
+	<SubTexture name="BGThird0003" x="5040" y="944" width="1680" height="944"/>
+	<SubTexture name="BGThird0004" x="0" y="1888" width="1680" height="944"/>
+	<SubTexture name="BGThird0005" x="1680" y="1888" width="1680" height="944"/>
+	<SubTexture name="BGThird006" x="3360" y="1888" width="1680" height="944"/>
+	<SubTexture name="BGThird007" x="5040" y="1888" width="1680" height="944"/>
+	<SubTexture name="BGThird008" x="0" y="2832" width="1680" height="944"/>
+	<SubTexture name="BGThird009" x="1680" y="2832" width="1680" height="944"/>
+	<SubTexture name="BGThird0010" x="3360" y="2832" width="1680" height="944"/>
+	<SubTexture name="BGThird0011" x="5040" y="2832" width="1680" height="944"/>
+	<SubTexture name="BGThird0012" x="0" y="3776" width="1680" height="944"/>
+	<SubTexture name="BGThird0013" x="5040" y="2832" width="1680" height="944"/>
+	<SubTexture name="BGThird0014" x="3360" y="2832" width="1680" height="944"/>
+	<SubTexture name="BGThird0015" x="1680" y="3776" width="1680" height="944"/>
+</TextureAtlas>

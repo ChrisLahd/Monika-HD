@@ -187,6 +187,7 @@ class PlayState extends MusicBeatState
 	var fc:Bool = true;
 
 	var bgGirls:BackgroundGirls;
+	var bigbg:FlxSprite;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
 
 	var talking:Bool = true;
@@ -335,7 +336,8 @@ class PlayState extends MusicBeatState
 		whiteflash = new FlxSprite(-100, -100).makeGraphic(Std.int(FlxG.width * 100), Std.int(FlxG.height * 100), FlxColor.WHITE);
 		whiteflash.scrollFactor.set();
 
-		blackScreen = new FlxSprite(-100, -100).makeGraphic(Std.int(FlxG.width * 100), Std.int(FlxG.height * 100), FlxColor.BLACK);
+		blackScreen = new FlxSprite(-100, -100).makeGraphic(Std.int(FlxG.width * 1), Std.int(FlxG.height * 1), FlxColor.BLACK);
+		blackScreen.setGraphicSize(Std.int(FlxG.width * 32));
 		blackScreen.scrollFactor.set();
 
 		trace('INFORMATION ABOUT WHAT U PLAYIN WIT:\nFRAMES: ' + Conductor.safeFrames + '\nZONE: ' + Conductor.safeZoneOffset + '\nTS: ' + Conductor.timeScale + '\nBotPlay : ' + FlxG.save.data.botplay);
@@ -648,35 +650,45 @@ class PlayState extends MusicBeatState
 			case 'schoolEvil':
 			{
 					curStage = 'schoolEvil';
-					defaultCamZoom = 0.9;
+					defaultCamZoom = 0.6;
 
 					var posX = 50;
 					var posY = 200;
 
 					//finalebgmybeloved
-					var oldspace:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('finalebgmybeloved'));
-					oldspace.antialiasing = false;
-					oldspace.scale.set(1.65, 1.65);
-					oldspace.scrollFactor.set(0.1, 0.1);
-					add(oldspace);
+				//	var oldspace:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('finalebgmybeloved'));
+				//	oldspace.antialiasing = false;
+				//	oldspace.scale.set(1.65, 1.65);
+				//	oldspace.scrollFactor.set(0.1, 0.1);
+				//	add(oldspace);
 
-					add(space = new FlxBackdrop(Paths.image('weeb/FinaleBG_1','week6')));
-					space.velocity.set(-10, 0);
-					space.antialiasing = false;
-					space.scrollFactor.set(0.1, 0.1);
-					space.scale.set(1.65, 1.65);
+				//	add(space = new FlxBackdrop(Paths.image('weeb/FinaleBG_1','week6')));
+				//	space.velocity.set(-10, 0);
+				//	space.antialiasing = false;
+				//	space.scrollFactor.set(0.1, 0.1);
+				//	space.scale.set(1.65, 1.65);
 
-					var bg:FlxSprite = new FlxSprite(70, posY).loadGraphic(Paths.image('weeb/FinaleBG_2','week6'));
-					bg.antialiasing = false;
-					bg.scale.set(2.3, 2.3);
-					bg.scrollFactor.set(0.4, 0.6);
-					add(bg);
+				// var bg:FlxSprite = new FlxSprite(70, posY).loadGraphic(Paths.image('weeb/FinaleBG_2','week6'));
+				// bg.antialiasing = false;
+				// bg.scale.set(2.3, 2.3);
+				// bg.scrollFactor.set(0.4, 0.6);
+				// add(bg);
 
-					var stageFront:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('weeb/FinaleFG','week6'));
-					stageFront.antialiasing = false;
-					stageFront.scale.set(1.5, 1.5);
-					stageFront.scrollFactor.set(1, 1);
-					add(stageFront);
+				bigbg = new FlxSprite();
+				bigbg.frames = Paths.getSparrowAtlas('weeb/bgbigmon', 'week6');
+				bigbg.animation.add('idle', [0, 0, 0, 1, 2, 3, 4, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 8, 7, 7, 7, 6, 6, 6, 5, 5, 5, 4, 4, 4, 3, 3, 3], 24, false);
+				bigbg.animation.addByPrefix('glitch', "BgThird", 24, false);
+				//bigbg.animation.play('idle', false);
+				bigbg.setGraphicSize(Std.int(bigbg.width * 1.7));
+
+				add(bigbg);
+				
+
+				//	var stageFront:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('weeb/FinaleFG','week6'));
+				//	stageFront.antialiasing = false;
+				//	stageFront.scale.set(1.5, 1.5);
+				//	stageFront.scrollFactor.set(1, 1);
+				//	add(stageFront);
 			}
 			case 'stage':
 				{
@@ -1390,6 +1402,7 @@ class PlayState extends MusicBeatState
 			dad.playAnim('idle');
 			gf.dance();
 			boyfriend.playAnim('idle');
+			
 
 			var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
 			introAssets.set('default', ['ready', "set", "go"]);
@@ -3707,6 +3720,7 @@ class PlayState extends MusicBeatState
 						boyfriend.visible = true;
 						dad.visible = true;
 						remove(blackScreen);
+						
 
 						new FlxTimer().start(0.03, function(tmr:FlxTimer)
 							{
@@ -3824,6 +3838,9 @@ class PlayState extends MusicBeatState
 
 		if (SONG.song.toLowerCase() == "bara no yume")
 			bgGirls.dance();
+
+		if (SONG.song.toLowerCase() == "your demise")
+			bigbg.animation.play('idle', false);
 
 		switch (curStage)
 		{

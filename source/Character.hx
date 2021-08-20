@@ -677,85 +677,25 @@ class Character extends FlxSprite
 				antialiasing = false;
 
 			case 'monika-angry':
-<<<<<<< Updated upstream
 				frames = Paths.getSparrowAtlas('characters/Monika_Finale');
-=======
-				frames = Paths.getSparrowAtlas('characters/bigmon');
->>>>>>> Stashed changes
 				animation.addByPrefix('idle', 'BigmonIdle', 24, false);
 				animation.addByPrefix('singUP', 'BigmonUp', 24, false);
 				animation.addByPrefix('singLEFT', 'BigmonLeft', 24, false);
 				animation.addByPrefix('singRIGHT', 'BigmonRight', 24, false);
 				animation.addByPrefix('singDOWN', 'BigmonDown', 24, false);
-<<<<<<< Updated upstream
 
-				
-				addOffset('danceLeft');
-				addOffset('danceRight');
-
-				addOffset("idle", 500, 480);
-				addOffset("singUP", 500, 480);
-				addOffset("singRIGHT", 500, 480);
-				addOffset("singLEFT", 500, 480);
-				addOffset("singDOWN", 500, 480);
-
-				//addOffset("singUP-alt", 60, -6);
-				//addOffset("singRIGHT-alt", 60, -6);
-				//addOffset("singLEFT-alt", 60, -6);
-				//addOffset("singDOWN-alt", 60, -6);
+				addOffset("idle", 500, 530);
+				addOffset("singUP", 500, 530);
+				addOffset("singRIGHT", 380, 475);
+				addOffset("singLEFT", 490, 527);
+				addOffset("singDOWN", 485, 500);
 
 				playAnim('idle');
 
-				setGraphicSize(Std.int(width * 0.9));
-=======
-			/*
-				animation.addByPrefix('singUP-alt', 'MONIKA UP GLITCH', 24, false);
-				animation.addByPrefix('singLEFT-alt', 'MONIKA LEFT GLITCH', 24, false);
-				animation.addByPrefix('singRIGHT-alt', 'MONIKA RIGHT GLITCH', 24, false);
-				animation.addByPrefix('singDOWN-alt', 'MONIKA DOWN GLITCH', 24, false);
-			*/
-				addOffset('danceLeft');
-				addOffset('danceRight');
-
-				addOffset("singUP");
-				addOffset("singRIGHT");
-				addOffset("singLEFT");
-				addOffset("singDOWN");
-			/*
-				addOffset("singUP-alt", 60, -6);
-				addOffset("singRIGHT-alt", 60, -6);
-				addOffset("singLEFT-alt", 60, -6);
-				addOffset("singDOWN-alt", 60, -6);
-			*/
-				playAnim('idle');
-
-		//		setGraphicSize(Std.int(width * 6));
->>>>>>> Stashed changes
+				setGraphicSize(Std.int(width * 1.2));
 				updateHitbox();
 
 				antialiasing = true;
-		
-
-	//	case 'monika-glitch':
-	//		
-	//	    frames = Paths.getSparrowAtlas('characters/Monika_Glitch');
-	//		
-	//		animation.addByPrefix('idle', 'MonGidle', 24, false);
-	//		animation.addByPrefix('singUP', 'MonGup', 24, false);
-	//		animation.addByPrefix('singLEFT', 'MonGleft', 24, false);
-	//		animation.addByPrefix('singRIGHT', 'MonGright', 24, false);
-	//		animation.addByPrefix('singDOWN', 'MonGdown', 24, false);
-//
-	//		addOffset("singUP", 60, -6);
-	//		addOffset("singRIGHT", 60, -6);
-	//		addOffset("singLEFT", 60, -6);
-	//		addOffset("singDOWN", 60, -6);
-//
-	//		playAnim('idle');
-	//		updateHitbox();
-//
-	//		antialiasing = true;
-//
 		}
 
 
