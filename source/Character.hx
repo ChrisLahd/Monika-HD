@@ -441,7 +441,11 @@ class Character extends FlxSprite
 					animation.addByPrefix('singRIGHTmiss', 'Miss Right', 24);
 					animation.addByPrefix('singDOWNmiss', 'Miss Down', 24);
 					animation.addByPrefix('peaceSIGN', 'BF HEY!!', 24);
-	
+					animation.addByPrefix('scared', 'BF idle shaking', 24);
+				    animation.addByPrefix('Dodge', 'boyfriend dodge', 24, false);
+				
+				
+					addOffset("Dodge", 7, 4);
 					addOffset('idle', -20, 160);
 					addOffset("singUP", 10, 225);
 					addOffset("singRIGHT", -150, 10);
