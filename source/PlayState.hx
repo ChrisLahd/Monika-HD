@@ -196,6 +196,8 @@ class PlayState extends MusicBeatState
 	var scoreTxt:FlxText;
 	var replayTxt:FlxText;
 
+
+
 	public static var campaignScore:Int = 0;
 
 	var defaultCamZoom:Float = 1.05;
@@ -1943,12 +1945,30 @@ class PlayState extends MusicBeatState
 	var maxNPS:Int = 0;
 
 	public static var songRate = 1.5;
+	var candodge:Bool = false;
+	var hasdodged:Bool = false;
+	var dodgedb:Bool = false;
 
 	override public function update(elapsed:Float)
 	{
 		#if !debug
 		perfectMode = false;
 		#end
+
+		if (FlxG.keys.justPressed.SPACE)
+			{
+				if (candodge || !dodgedb){
+					hasdodged = true;
+					candodge = false;
+				}
+				else if (!candodge){
+					dodgedb = true;
+					new FlxTimer().start(3, function(tmr:FlxTimer)
+						{
+							dodgedb = false;
+					});
+				}
+			}
 
 		if (FlxG.save.data.botplay && FlxG.keys.justPressed.ONE)
 			camHUD.visible = !camHUD.visible;
@@ -2121,7 +2141,7 @@ class PlayState extends MusicBeatState
 		/* if (FlxG.keys.justPressed.NINE)
 			FlxG.switchState(new Charting()); */
 
-		#if debug
+//		#if debug
 		if (FlxG.keys.justPressed.EIGHT)
 		{
 			FlxG.switchState(new AnimationDebug(SONG.player2));
@@ -2131,7 +2151,7 @@ class PlayState extends MusicBeatState
 				luaModchart.die();
 				luaModchart = null;
 			}
-			#end
+	//		#end
 		}
 
 		if (FlxG.keys.justPressed.ZERO)
@@ -3695,7 +3715,38 @@ class PlayState extends MusicBeatState
 		boyfriend.playAnim('scared', true);
 		gf.playAnim('scared', true);
 	}
+	function penattack(){
+		var evilguy:FlxSprite = new FlxSprite(0, 0);
+		evilguy.frames = Paths.getSparrowAtlas('demise/monattack');
+		evilguy.animation.addByPrefix('whatthe', 'BigmonAttack', 24, false);
+		evilguy.antialiasing = true;
+		evilguy.setGraphicSize(Std.int(evilguy.width * 1.2));
+		evilguy.x = dad.x;
+		evilguy.y = dad.y;
+		evilguy.x -= 450;
+		evilguy.y -= 585;
 
+		add(evilguy);
+		dad.visible = false;
+		evilguy.animation.play('whatthe');
+		candodge = true;
+		evilguy.animation.finishCallback = function(lol:String)
+			{
+				camHUD.shake(0.05, 0.2);
+				FlxG.camera.shake(0.05, 0.2);
+				if (!hasdodged){
+						health = 0;
+					}
+				new FlxTimer().start(0.4, function(tmr:FlxTimer)
+					{
+						candodge = false;
+						hasdodged = false;
+						remove(evilguy);
+						dad.visible = true;
+
+				});
+			}
+	}
 	override function stepHit()
 	{
 		super.stepHit();
@@ -3734,7 +3785,8 @@ class PlayState extends MusicBeatState
 											remove(whiteflash);
 										}
 							});
-					
+					case 803 | 1187 | 1323 | 1339 | 1355 | 1371 | 1387 | 1403 | 1419 | 1434 | 1823:
+						penattack();
 					case 3521:
 						FlxG.camera.fade(FlxColor.BLACK, 2, false);
 				}

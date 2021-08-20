@@ -42,6 +42,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		bf = new Boyfriend(x, y, daBf);
 		trace(bf == null ? "bf if hella dumb" : "bf has a big forehead");
 		add(bf);
+		bf.setGraphicSize(Std.int(bf.width / 5));
 
 		camFollow = new FlxObject(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y, 1, 1);
 		add(camFollow);

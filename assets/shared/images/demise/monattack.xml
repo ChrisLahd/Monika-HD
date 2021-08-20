@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="monattack.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BigmonAttack0000" x="0" y="0" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0001" x="1216" y="0" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0002" x="2432" y="0" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0003" x="3648" y="0" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0004" x="4864" y="0" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0005" x="6080" y="0" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0006" x="0" y="1142" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0007" x="1216" y="1142" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0008" x="2432" y="1142" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0009" x="3648" y="1142" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0010" x="4864" y="1142" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0011" x="6080" y="1142" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0012" x="0" y="2284" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0013" x="1216" y="2284" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0014" x="2432" y="2284" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0015" x="3648" y="2284" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0016" x="4864" y="2284" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0017" x="6080" y="2284" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0018" x="0" y="3426" width="1216" height="1142"/>
+	<SubTexture name="BigmonAttack0019" x="1216" y="3426" width="1216" height="1142"/>
+</TextureAtlas>
