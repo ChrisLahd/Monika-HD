@@ -424,29 +424,33 @@ class Character extends FlxSprite
 				antialiasing = true;
 
 				flipX = true;
+
+
 			case 'bf-pixelangry':
-					frames = Paths.getSparrowAtlas('characters/bfPixelangry');
-					animation.addByPrefix('idle', 'BF IDLE', 24, false);
-					animation.addByPrefix('singUP', 'BF UP NOTE', 24, false);
-					animation.addByPrefix('singLEFT', 'BF LEFT NOTE', 24, false);
-					animation.addByPrefix('singRIGHT', 'BF RIGHT NOTE', 24, false);
-					animation.addByPrefix('singDOWN', 'BF DOWN NOTE', 24, false);
-					animation.addByPrefix('singUPmiss', 'BF UP MISS', 24, false);
-					animation.addByPrefix('singLEFTmiss', 'BF LEFT MISS', 24, false);
-					animation.addByPrefix('singRIGHTmiss', 'BF RIGHT MISS', 24, false);
-					animation.addByPrefix('singDOWNmiss', 'BF DOWN MISS', 24, false);
+					frames = Paths.getSparrowAtlas('characters/bfangy');
+					animation.addByPrefix('idle', 'Idle', 24);
+					animation.addByPrefix('singUP', 'Sing Up', 24);
+					animation.addByPrefix('singLEFT', 'Sing Left', 24);
+					animation.addByPrefix('singRIGHT', 'Sing Right', 24);
+					animation.addByPrefix('singDOWN', 'Sing Down', 24);
+					animation.addByPrefix('singUPmiss', 'Miss Up', 24);
+					animation.addByPrefix('singLEFTmiss', 'Miss Left', 24);
+					animation.addByPrefix('singRIGHTmiss', 'Miss Right', 24);
+					animation.addByPrefix('singDOWNmiss', 'Miss Down', 24);
+					animation.addByPrefix('peaceSIGN', 'BF HEY!!', 24);
 	
-					addOffset('idle');
-					addOffset("singUP");
-					addOffset("singRIGHT");
-					addOffset("singLEFT");
+					addOffset('idle', -20, 160);
+					addOffset("singUP", 10, 225);
+					addOffset("singRIGHT", -80, 30);
+					addOffset("singLEFT", 40, 150);
 					addOffset("singDOWN");
-					addOffset("singUPmiss");
-					addOffset("singRIGHTmiss");
-					addOffset("singLEFTmiss");
-					addOffset("singDOWNmiss");
+					addOffset("singUPmiss", 150, 220);
+					addOffset("singRIGHTmiss", 50, 190);
+					addOffset("singLEFTmiss", 50, 190);
+					addOffset("singDOWNmiss", 50, 190);
+					addOffset("peaceSIGN", 50, 190);
 	
-					setGraphicSize(Std.int(width * 6));
+					setGraphicSize(Std.int(width * 0.86));
 					updateHitbox();
 	
 					playAnim('idle');
@@ -454,9 +458,11 @@ class Character extends FlxSprite
 					width -= 100;
 					height -= 100;
 	
-					antialiasing = false;
+					antialiasing = true;
 	
 					flipX = true;
+
+
 			case 'bf-pixel-dead':
 				frames = Paths.getSparrowAtlas('characters/bfPixel');
 				animation.addByPrefix('singUP', "BF Dies pixel", 24, false);
