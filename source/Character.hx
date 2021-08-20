@@ -441,9 +441,9 @@ class Character extends FlxSprite
 	
 					addOffset('idle', -20, 160);
 					addOffset("singUP", 10, 225);
-					addOffset("singRIGHT", -80, 30);
-					addOffset("singLEFT", 40, 150);
-					addOffset("singDOWN");
+					addOffset("singRIGHT", -150, 10);
+					addOffset("singLEFT", 20, 160);
+					addOffset("singDOWN", -60, 40);
 					addOffset("singUPmiss", 150, 220);
 					addOffset("singRIGHTmiss", 50, 190);
 					addOffset("singLEFTmiss", 50, 190);
@@ -685,15 +685,15 @@ class Character extends FlxSprite
 			case 'monika-angry':
 				frames = Paths.getSparrowAtlas('characters/Monika_Finale');
 				animation.addByPrefix('idle', 'BigmonIdle', 24, false);
-				animation.addByPrefix('singUP', 'BigmonUp', 24, false);
-				animation.addByPrefix('singLEFT', 'BigmonLeft', 24, false);
-				animation.addByPrefix('singRIGHT', 'BigmonRight', 24, false);
-				animation.addByPrefix('singDOWN', 'BigmonDown', 24, false);
+				animation.addByPrefix('singUP', 'BigmonUp', 12, false);
+				animation.addByPrefix('singLEFT', 'BigmonLeft', 12, false);
+				animation.addByPrefix('singRIGHT', 'BigmonRight', 12, false);
+				animation.addByPrefix('singDOWN', 'BigmonDown', 12, false);
 
 				addOffset("idle", 500, 530);
-				addOffset("singUP", 500, 530);
+				addOffset("singUP", 530, 530);
 				addOffset("singRIGHT", 380, 475);
-				addOffset("singLEFT", 490, 527);
+				addOffset("singLEFT", 440, 537);
 				addOffset("singDOWN", 485, 500);
 
 				playAnim('idle');
