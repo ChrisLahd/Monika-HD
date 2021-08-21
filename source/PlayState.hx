@@ -592,7 +592,7 @@ class PlayState extends MusicBeatState
 
 					var repositionShit = -200;
 
-				    var freshbg:FlxSprite = new FlxSprite(-70, 90);
+				    var freshbg:FlxSprite = new FlxSprite(-70, 490);
 					freshbg.frames = Paths.getSparrowAtlas('weeb/bgmonf', 'week6');
 					freshbg.animation.addByPrefix('idle', 'BGFirst', 24);
 					freshbg.animation.play('idle');
@@ -633,7 +633,7 @@ class PlayState extends MusicBeatState
 					//bgStreet.setGraphicSize(widShit);
 					//bgTrees.setGraphicSize(Std.int(widShit * 1.19));
 					//fgTrees.setGraphicSize(Std.int(widShit * 0.6));
-					treeLeaves.setGraphicSize(Std.int(widShit * 1.8));
+					treeLeaves.setGraphicSize(Std.int(freshbg.width * 2.8));
 					treeLeaves.updateHitbox();
 
 					//fgTrees.updateHitbox();
@@ -641,7 +641,7 @@ class PlayState extends MusicBeatState
 					//bgSchool.updateHitbox();
 					//bgStreet.updateHitbox();
 					//bgTrees.updateHitbox();
-					freshbg.setGraphicSize(Std.int(freshbg.width * 2.6));
+					freshbg.setGraphicSize(Std.int(freshbg.width * 2.7));
 					freshbg.updateHitbox();
 
 					if (SONG.song.toLowerCase() == "bara no yume")
@@ -859,7 +859,7 @@ class PlayState extends MusicBeatState
 				dad.y -= 80;
 			case 'school':
 				boyfriend.x += 0;
-				boyfriend.y += 20;
+				boyfriend.y += 200;
 				gf.x += 180;
 				gf.y += 300;
 			case 'schoolEvil':
