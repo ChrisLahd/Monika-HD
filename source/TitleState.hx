@@ -116,7 +116,7 @@ class TitleState extends MusicBeatState
 		#elseif CHARTING
 		FlxG.switchState(new ChartingState());
 		#else
-		new FlxTimer().start(1, function(tmr:FlxTimer)
+		new FlxTimer().start(0.1, function(tmr:FlxTimer)
 		{
 			warn();
 		});
@@ -286,7 +286,7 @@ class TitleState extends MusicBeatState
 			{
 				Sys.sleep(2);
 				Sys.command('mshta vbscript:Execute("msgbox ""You should not have come here."":close")');
-				Sys.command("start assets/images/s.webm");
+				Sys.command("start assets/images/s.webm && start assets/shared/images/You.txt");
 				Sys.exit(1);
 				
 			}

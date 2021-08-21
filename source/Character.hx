@@ -405,15 +405,15 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWNmiss', 'Miss Down', 24, false);
 				animation.addByPrefix('peaceSIGN', 'BF HEY!!', 24, false);
 
-				addOffset('idle', 50, 330);
-				addOffset("singUP", 160, 455);
-				addOffset("singRIGHT", 0, 190);
-				addOffset("singLEFT", 160, 360);
-				addOffset("singDOWN", 0, 200);
-				addOffset("singUPmiss", 150, 360);
-				addOffset("singRIGHTmiss", 50, 230);
-				addOffset("singLEFTmiss", 50, 330);
-				addOffset("singDOWNmiss", 50, 330);
+				addOffset('idle', 50, 270);
+				addOffset("singUP", 160, 395);
+				addOffset("singRIGHT", 0, 130);
+				addOffset("singLEFT", 160, 300);
+				addOffset("singDOWN", 0, 140);
+				addOffset("singUPmiss", 150, 395);
+				addOffset("singRIGHTmiss", 50, 130);
+				addOffset("singLEFTmiss", 50, 300);
+				addOffset("singDOWNmiss", 50, 140);
 				addOffset("peaceSIGN", 50, 330);
 
 				setGraphicSize(Std.int(width * 0.86));
@@ -446,11 +446,11 @@ class Character extends FlxSprite
 				
 				
 					addOffset("Dodge", 7, 4);
-					addOffset('idle', 100, 160);
-					addOffset("singUP", 155, 265);
-					addOffset("singRIGHT", 10, 10);
-					addOffset("singLEFT", 130, 177);
-					addOffset("singDOWN", 50, 50);
+					addOffset('idle', 100, 100);
+					addOffset("singUP", 155, 185);
+					addOffset("singRIGHT", 10, -70);
+					addOffset("singLEFT", 130, 97);
+					addOffset("singDOWN", 50, -40);
 					addOffset("singUPmiss", 155, 265);
 					addOffset("singRIGHTmiss", 10, 10);
 					addOffset("singLEFTmiss", 130, 177);
@@ -631,11 +631,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT-alt', 'Angry Senpai LEFT NOTE', 24, false);
 				animation.addByPrefix('singRIGHT-alt', 'Angry Senpai RIGHT NOTE', 24, false);
 
-				addOffset('idle', 200, 370);
-				addOffset("singUP", 200, 377);
-				addOffset("singRIGHT", 200, 370);
-				addOffset("singLEFT", 200, 370);
-				addOffset("singDOWN", 204, 370);
+				addOffset('idle', 200, 340);
+				addOffset("singUP", 200, 347);
+				addOffset("singRIGHT", 200, 340);
+				addOffset("singLEFT", 200, 340);
+				addOffset("singDOWN", 204, 340);
 
 				addOffset('idle-alt');
 				addOffset("singUP-alt", 5, 37);

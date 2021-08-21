@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bgmonpet.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BGPetals0000" x="0" y="0" width="766" height="447"/>
+	<SubTexture name="BGPetals0001" x="766" y="0" width="766" height="447"/>
+	<SubTexture name="BGPetals0002" x="1532" y="0" width="766" height="447"/>
+	<SubTexture name="BGPetals0003" x="2298" y="0" width="766" height="447"/>
+	<SubTexture name="BGPetals0004" x="3064" y="0" width="766" height="447"/>
+	<SubTexture name="BGPetals0005" x="0" y="447" width="766" height="447"/>
+	<SubTexture name="BGPetals0006" x="766" y="447" width="766" height="447"/>
+	<SubTexture name="BGPetals0007" x="1532" y="447" width="766" height="447"/>
+	<SubTexture name="BGPetals0008" x="2298" y="447" width="766" height="447"/>
+	<SubTexture name="BGPetals0009" x="3064" y="447" width="766" height="447"/>
+	<SubTexture name="BGPetals0010" x="0" y="894" width="766" height="447"/>
+	<SubTexture name="BGPetals0011" x="766" y="894" width="766" height="447"/>
+	<SubTexture name="BGPetals0012" x="1532" y="894" width="766" height="447"/>
+	<SubTexture name="BGPetals0013" x="2298" y="894" width="766" height="447"/>
+	<SubTexture name="BGPetals0014" x="3064" y="894" width="766" height="447"/>
+	<SubTexture name="BGPetals0015" x="0" y="1341" width="766" height="447"/>
+	<SubTexture name="BGPetals0016" x="766" y="1341" width="766" height="447"/>
+	<SubTexture name="BGPetals0017" x="1532" y="1341" width="766" height="447"/>
+	<SubTexture name="BGPetals0018" x="2298" y="1341" width="766" height="447"/>
+	<SubTexture name="BGPetals0019" x="3064" y="1341" width="766" height="447"/>
+	<SubTexture name="BGPetals0020" x="0" y="1788" width="766" height="447"/>
+	<SubTexture name="BGPetals0021" x="766" y="1788" width="766" height="447"/>
+	<SubTexture name="BGPetals0022" x="1532" y="1788" width="766" height="447"/>
+	<SubTexture name="BGPetals0023" x="2298" y="1788" width="766" height="447"/>
+	<SubTexture name="BGPetals0024" x="3064" y="1788" width="766" height="447"/>
+	<SubTexture name="BGPetals0025" x="0" y="2235" width="766" height="447"/>
+	<SubTexture name="BGPetals0026" x="766" y="2235" width="766" height="447"/>
+	<SubTexture name="BGPetals0027" x="1532" y="2235" width="766" height="447"/>
+	<SubTexture name="BGPetals0028" x="2298" y="2235" width="766" height="447"/>
+	<SubTexture name="BGPetals0029" x="3064" y="2235" width="766" height="447"/>
+	<SubTexture name="BGPetals0030" x="0" y="2682" width="766" height="447"/>
+	<SubTexture name="BGPetals0031" x="766" y="2682" width="766" height="447"/>
+	<SubTexture name="BGPetals0032" x="1532" y="2682" width="766" height="447"/>
+	<SubTexture name="BGPetals0033" x="2298" y="2682" width="766" height="447"/>
+	<SubTexture name="BGPetals0034" x="3064" y="2682" width="766" height="447"/>
+	<SubTexture name="BGPetals0035" x="0" y="3129" width="766" height="447"/>
+	<SubTexture name="BGPetals0036" x="766" y="3129" width="766" height="447"/>
+	<SubTexture name="BGPetals0037" x="1532" y="3129" width="766" height="447"/>
+	<SubTexture name="BGPetals0038" x="2298" y="3129" width="766" height="447"/>
+	<SubTexture name="BGPetals0039" x="0" y="0" width="766" height="447"/>
+</TextureAtlas>
