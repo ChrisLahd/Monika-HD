@@ -451,11 +451,11 @@ class Character extends FlxSprite
 					addOffset("singRIGHT", 10, 10);
 					addOffset("singLEFT", 130, 177);
 					addOffset("singDOWN", 50, 50);
-					addOffset("singUPmiss", 120, 220);
-					addOffset("singRIGHTmiss", 0, 190);
-					addOffset("singLEFTmiss", 0, 190);
-					addOffset("singDOWNmiss", 0, 190);
-					addOffset("peaceSIGN", 0, 190);
+					addOffset("singUPmiss", 155, 265);
+					addOffset("singRIGHTmiss", 10, 10);
+					addOffset("singLEFTmiss", 130, 177);
+					addOffset("singDOWNmiss", 50, 50);
+					addOffset("peaceSIGN", 69, 69);
 	
 					setGraphicSize(Std.int(width * 0.86));
 					updateHitbox();
