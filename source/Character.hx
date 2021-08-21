@@ -436,26 +436,26 @@ class Character extends FlxSprite
 					animation.addByPrefix('singLEFT', 'Sing Left', 24);
 					animation.addByPrefix('singRIGHT', 'Sing Right', 24);
 					animation.addByPrefix('singDOWN', 'Sing Down', 24);
-					animation.addByPrefix('singUPmiss', 'Miss Up', 24);
-					animation.addByPrefix('singLEFTmiss', 'Miss Left', 24);
-					animation.addByPrefix('singRIGHTmiss', 'Miss Right', 24);
-					animation.addByPrefix('singDOWNmiss', 'Miss Down', 24);
-					animation.addByPrefix('peaceSIGN', 'BF HEY!!', 24);
-					animation.addByPrefix('scared', 'BF idle shaking', 24);
-				    animation.addByPrefix('Dodge', 'boyfriend dodge', 24, false);
+					animation.addByPrefix('singUPmiss', 'Miss Up', 24, false);
+					animation.addByPrefix('singLEFTmiss', 'Miss Left', 24, false);
+					animation.addByPrefix('singRIGHTmiss', 'Miss Right', 24, false);
+					animation.addByPrefix('singDOWNmiss', 'Miss Down', 24, false);
+					animation.addByPrefix('peaceSIGN', 'BF HEY!!', 24, false);
+					animation.addByPrefix('scared', 'BF idle shaking', 24, false);
+				    animation.addByPrefix('Dodge', 'bfdodge', 24, false);
 				
 				
 					addOffset("Dodge", 7, 4);
-					addOffset('idle', -20, 160);
-					addOffset("singUP", 10, 225);
-					addOffset("singRIGHT", -150, 10);
-					addOffset("singLEFT", 20, 160);
-					addOffset("singDOWN", -60, 40);
-					addOffset("singUPmiss", 150, 220);
-					addOffset("singRIGHTmiss", 50, 190);
-					addOffset("singLEFTmiss", 50, 190);
-					addOffset("singDOWNmiss", 50, 190);
-					addOffset("peaceSIGN", 50, 190);
+					addOffset('idle', 100, 160);
+					addOffset("singUP", 155, 265);
+					addOffset("singRIGHT", 10, 10);
+					addOffset("singLEFT", 130, 177);
+					addOffset("singDOWN", 50, 50);
+					addOffset("singUPmiss", 120, 220);
+					addOffset("singRIGHTmiss", 0, 190);
+					addOffset("singLEFTmiss", 0, 190);
+					addOffset("singDOWNmiss", 0, 190);
+					addOffset("peaceSIGN", 0, 190);
 	
 					setGraphicSize(Std.int(width * 0.86));
 					updateHitbox();
