@@ -858,8 +858,8 @@ class PlayState extends MusicBeatState
 				boyfriend.x += 320;
 				dad.y -= 80;
 			case 'school':
-				boyfriend.x += 200;
-				boyfriend.y += 220;
+				boyfriend.x += 0;
+				boyfriend.y += 20;
 				gf.x += 180;
 				gf.y += 300;
 			case 'schoolEvil':
@@ -2347,9 +2347,6 @@ class PlayState extends MusicBeatState
 					case 'senpai-angry':
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
-					case 'monika':
-						camFollow.y = dad.getMidpoint().y - 430;
-						camFollow.x = dad.getMidpoint().x + 150;
 					case 'duet':
 						camFollow.y = dad.getMidpoint().y - 400;
 						camFollow.x = dad.getMidpoint().x + 0;
@@ -2387,19 +2384,6 @@ class PlayState extends MusicBeatState
 						camFollow.x = boyfriend.getMidpoint().x - 300;
 					case 'mall':
 						camFollow.y = boyfriend.getMidpoint().y - 200;
-					case 'school':
-						switch (curSong.toLowerCase())
-						{
-							case "your reality":
-								camFollow.x = boyfriend.getMidpoint().x - 500;
-								camFollow.y = boyfriend.getMidpoint().y - 600;
-							case "bara no yume":
-								camFollow.x = boyfriend.getMidpoint().x - 300;
-								camFollow.y = boyfriend.getMidpoint().y - 200;
-							default:
-								camFollow.x = boyfriend.getMidpoint().x - 200;
-								camFollow.y = boyfriend.getMidpoint().y - 200;
-						}
 					case 'schoolEvil':
 						camFollow.x = boyfriend.getMidpoint().x - 200;
 						camFollow.y = boyfriend.getMidpoint().y - 200;
