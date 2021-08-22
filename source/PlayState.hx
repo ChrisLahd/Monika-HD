@@ -584,15 +584,15 @@ class PlayState extends MusicBeatState
 			{
 					curStage = 'school';
 
-					defaultCamZoom = 0.75;
+					defaultCamZoom = 0.78;
 
-					var bgSky = new FlxSprite().loadGraphic(Paths.image('weeb/weebSky','week6'));
-					bgSky.scrollFactor.set(0.1, 0.1);
-					add(bgSky);
+				///var bgSky = new FlxSprite(300, 0).loadGraphic(Paths.image('weeb/weebSky','week6'));
+				///bgSky.scrollFactor.set(0.1, 0.1);
+				///add(bgSky);
 
 					var repositionShit = -200;
 
-				    var freshbg:FlxSprite = new FlxSprite(-70, 490);
+				    var freshbg:FlxSprite = new FlxSprite(-70, -90);
 					freshbg.frames = Paths.getSparrowAtlas('weeb/bgmonf', 'week6');
 					freshbg.animation.addByPrefix('idle', 'BGFirst', 24);
 					freshbg.animation.play('idle');
@@ -619,21 +619,21 @@ class PlayState extends MusicBeatState
 				//	bgTrees.scrollFactor.set(0.85, 0.85);
 				//	add(bgTrees);
 
-					var treeLeaves:FlxSprite = new FlxSprite(repositionShit, -40);
+					var treeLeaves:FlxSprite = new FlxSprite(-60, -40);
 					treeLeaves.frames = Paths.getSparrowAtlas('weeb/bgmonpet','week6');
 					treeLeaves.animation.addByPrefix('leaves', 'BGPetals', 24, true);
 					treeLeaves.animation.play('leaves');
 					treeLeaves.scrollFactor.set(0.85, 0.85);
 					add(treeLeaves);
 
-					var widShit = Std.int(bgSky.width * 3);
+					//var widShit = Std.int(bgSky.width * 3);
 
 					//bgSky.setGraphicSize(widShit);
 					//bgSchool.setGraphicSize(widShit);
 					//bgStreet.setGraphicSize(widShit);
 					//bgTrees.setGraphicSize(Std.int(widShit * 1.19));
 					//fgTrees.setGraphicSize(Std.int(widShit * 0.6));
-					treeLeaves.setGraphicSize(Std.int(freshbg.width * 2.8));
+					treeLeaves.setGraphicSize(Std.int(freshbg.width * 2.5));
 					treeLeaves.updateHitbox();
 
 					//fgTrees.updateHitbox();
@@ -815,12 +815,12 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'monika':
 				dad.x += 250;
-				dad.y += 360;
-				camPos.set(dad.getGraphicMidpoint().x - 230, dad.getGraphicMidpoint().y - 360);
+				dad.y += 280;
+				camPos.set(dad.getGraphicMidpoint().x - 90, dad.getGraphicMidpoint().y - 230);
 			case 'duet':
 				dad.x += 150;
 				dad.y += 380;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+				camPos.set(dad.getGraphicMidpoint().x + 800, dad.getGraphicMidpoint().y);
 			case 'monika-angry':
 				dad.x += 15;
 				dad.y += 360;
@@ -858,10 +858,12 @@ class PlayState extends MusicBeatState
 				boyfriend.x += 320;
 				dad.y -= 80;
 			case 'school':
-				boyfriend.x += 0;
-				boyfriend.y += 200;
+				boyfriend.x += 90;
+				boyfriend.y -= 10;
 				gf.x += 180;
-				gf.y += 300;
+				gf.y += 350;
+				dad.x += 40;
+				dad.y += 90;
 			case 'schoolEvil':
 				dad.y -= 69;
 				dad.x += 300;
