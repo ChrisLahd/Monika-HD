@@ -444,7 +444,7 @@ class Character extends FlxSprite
 				
 				
 					addOffset("Dodge", 7, 4);
-					addOffset('idle', 100, 100);
+					addOffset('idle', 100, 90);
 					addOffset("singUP", 155, 185);
 					addOffset("singRIGHT", 10, -70);
 					addOffset("singLEFT", 130, 97);
@@ -629,11 +629,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT-alt', 'Angry Senpai LEFT NOTE', 24, false);
 				animation.addByPrefix('singRIGHT-alt', 'Angry Senpai RIGHT NOTE', 24, false);
 
-				addOffset('idle', 200, 340);
-				addOffset("singUP", 200, 347);
-				addOffset("singRIGHT", 200, 340);
-				addOffset("singLEFT", 200, 340);
-				addOffset("singDOWN", 204, 340);
+				addOffset('idle', 200, 250);
+				addOffset("singUP", 200, 257);
+				addOffset("singRIGHT", 200, 250);
+				addOffset("singLEFT", 200, 250);
+				addOffset("singDOWN", 204, 250);
 
 				addOffset('idle-alt');
 				addOffset("singUP-alt", 5, 37);
