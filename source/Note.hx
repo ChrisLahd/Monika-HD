@@ -63,7 +63,7 @@ class Note extends FlxSprite
 		switch (PlayState.SONG.noteStyle)
 		{
 			case 'pixel':
-				loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels','week6'), true, 17, 17);
+				loadGraphic(Paths.image('images/NOTE_assets','shared'), true, 17, 17);
 
 				if (noteType == 2)
 					{
@@ -82,17 +82,22 @@ class Note extends FlxSprite
 
 				if (isSustainNote)
 				{
-					loadGraphic(Paths.image('weeb/pixelUI/arrowEnds','week6'), true, 7, 6);
+					frames = Paths.getSparrowAtlas('NOTE_assets');
 
-					animation.add('purpleholdend', [4]);
-					animation.add('greenholdend', [6]);
-					animation.add('redholdend', [7]);
-					animation.add('blueholdend', [5]);
-
-					animation.add('purplehold', [0]);
-					animation.add('greenhold', [2]);
-					animation.add('redhold', [3]);
-					animation.add('bluehold', [1]);
+					    animation.addByPrefix('greenScroll', 'green0');
+						animation.addByPrefix('redScroll', 'red0');
+						animation.addByPrefix('blueScroll', 'blue0');
+						animation.addByPrefix('purpleScroll', 'purple0');
+		
+						animation.addByPrefix('purpleholdend', 'pruple end hold');
+						animation.addByPrefix('greenholdend', 'green hold end');
+						animation.addByPrefix('redholdend', 'red hold end');
+						animation.addByPrefix('blueholdend', 'blue hold end');
+					
+						animation.addByPrefix('purplehold', 'purple hold piece');
+						animation.addByPrefix('greenhold', 'green hold piece');
+						animation.addByPrefix('redhold', 'red hold piece');
+						animation.addByPrefix('bluehold', 'blue hold piece');
 				}
 
 				setGraphicSize(Std.int(width * PlayState.daPixelZoom));
@@ -129,6 +134,7 @@ class Note extends FlxSprite
 						animation.addByPrefix('redhold', 'red hold piece');
 						animation.addByPrefix('bluehold', 'blue hold piece');
 
+
 						
 					
 						setGraphicSize(Std.int(width * 0.7));
@@ -144,13 +150,13 @@ class Note extends FlxSprite
 				x += swagWidth * 0;
 				animation.play('purpleScroll');
 			case 1:
-				x += swagWidth * 1;
+				x += swagWidth * 1.7;
 				animation.play('blueScroll');
 			case 2:
-				x += swagWidth * 2;
+				x += swagWidth * 2.2;
 				animation.play('greenScroll');
 			case 3:
-				x += swagWidth * 3;
+				x += swagWidth * 3.2;
 				animation.play('redScroll');
 		}
 
@@ -183,10 +189,10 @@ class Note extends FlxSprite
 
 			updateHitbox();
 
-			x -= width / 2;
+		//	x -= width / 2;
 
 			if (PlayState.curStage.startsWith('school'))
-				x += 30;
+				x += 1;
 
 			if (prevNote.isSustainNote)
 			{

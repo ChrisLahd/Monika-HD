@@ -1833,7 +1833,7 @@ class PlayState extends MusicBeatState
 							babyArrow.animation.addByPrefix('pressed', 'left press', 24, false);
 							babyArrow.animation.addByPrefix('confirm', 'left confirm', 24, false);
 						case 1:
-							babyArrow.x += Note.swagWidth * 1;
+							babyArrow.x += Note.swagWidth * 1.5;
 							babyArrow.animation.addByPrefix('static', 'arrowDOWN');
 							babyArrow.animation.addByPrefix('pressed', 'down press', 24, false);
 							babyArrow.animation.addByPrefix('confirm', 'down confirm', 24, false);
@@ -1855,7 +1855,7 @@ class PlayState extends MusicBeatState
 
 			if (!isStoryMode)
 			{
-				babyArrow.y -= 10;
+				babyArrow.y -= 1;
 				babyArrow.alpha = 0;
 				FlxTween.tween(babyArrow, {y: babyArrow.y + 10, alpha: 1}, 1, {ease: FlxEase.circOut, startDelay: 0.5 + (0.2 * i)});
 			}
@@ -2610,8 +2610,8 @@ class PlayState extends MusicBeatState
 							if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
 							{
 								spr.centerOffsets();
-								spr.offset.x -= 13;
-								spr.offset.y -= 13;
+								spr.offset.x -= 3;
+								spr.offset.y -= 3;
 							}
 							else
 								spr.centerOffsets();
@@ -3252,7 +3252,7 @@ class PlayState extends MusicBeatState
 							{
 								for (coolNote in possibleNotes)
 								{
-									if (coolNote.noteData == daNote.noteData && Math.abs(daNote.strumTime - coolNote.strumTime) < 10)
+									if (coolNote.noteData == daNote.noteData && Math.abs(daNote.strumTime - coolNote.strumTime) < 50)
 									{ // if it's the same note twice at < 10ms distance, just delete it
 										// EXCEPT u cant delete it in this loop cuz it fucks with the collection lol
 										dumbNotes.push(daNote);
@@ -3390,8 +3390,8 @@ class PlayState extends MusicBeatState
 					if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
 					{
 						spr.centerOffsets();
-						spr.offset.x -= 13;
-						spr.offset.y -= 13;
+						spr.offset.x -= 0;
+						spr.offset.y -= 0;
 					}
 					else
 						spr.centerOffsets();
@@ -3732,7 +3732,12 @@ class PlayState extends MusicBeatState
 				camHUD.shake(0.05, 0.2);
 				FlxG.camera.shake(0.05, 0.2);
 				if (!hasdodged){
+					    FlxG.camera.flash(FlxColor.RED, 4);
 						health = 0;
+					}
+				if (hasdodged)
+					{
+						boyfriend.playAnim('Dodge');
 					}
 				new FlxTimer().start(0.4, function(tmr:FlxTimer)
 					{
