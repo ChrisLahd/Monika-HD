@@ -404,15 +404,15 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHTmiss', 'Miss Right', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'Miss Down', 24, false);
 
-				addOffset('idle');
-				addOffset("singUP", 87, 114);
-				addOffset("singRIGHT", -112, -156);
-				addOffset("singLEFT", 54, 32);
-				addOffset("singDOWN", -66, -141);
-				addOffset("singUPmiss", 87, 114);
-				addOffset("singRIGHTmiss", -112, -156);
-				addOffset("singLEFTmiss", 54, 32);
-				addOffset("singDOWNmiss", -66, -141);
+				addOffset('idle', -40, 105);
+				addOffset("singUP", 87, 184);
+				addOffset("singRIGHT", -112, -56);
+				addOffset("singLEFT", 54, 129);
+				addOffset("singDOWN", -66, -46);
+				addOffset("singUPmiss", 87, 204);
+				addOffset("singRIGHTmiss", -112, -66);
+				addOffset("singLEFTmiss", 54, 72);
+				addOffset("singDOWNmiss", -66, -101);
 
 				setGraphicSize(Std.int(width * 0.86));
 				updateHitbox();
@@ -629,11 +629,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT-alt', 'Angry Senpai LEFT NOTE', 24, false);
 				animation.addByPrefix('singRIGHT-alt', 'Angry Senpai RIGHT NOTE', 24, false);
 
-				addOffset('idle', 200, 250);
-				addOffset("singUP", 200, 257);
-				addOffset("singRIGHT", 200, 250);
-				addOffset("singLEFT", 200, 250);
-				addOffset("singDOWN", 204, 250);
+				addOffset('idle', 200, 120);
+				addOffset("singUP", 200, 157);
+				addOffset("singRIGHT", 200, 150);
+				addOffset("singLEFT", 200, 150);
+				addOffset("singDOWN", 204, 150);
 
 				addOffset('idle-alt');
 				addOffset("singUP-alt", 5, 37);
@@ -643,8 +643,8 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
-				setGraphicSize(Std.int(width / 1.9));
-				setGraphicSize(Std.int(height / 1.9));
+				setGraphicSize(Std.int(width / 2.2));
+				setGraphicSize(Std.int(height / 2.2));
 				updateHitbox();
 
 				antialiasing = true;

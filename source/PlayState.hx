@@ -592,7 +592,7 @@ class PlayState extends MusicBeatState
 
 					var repositionShit = -200;
 
-				    var freshbg:FlxSprite = new FlxSprite(-90, -30);
+				    var freshbg:FlxSprite = new FlxSprite(-90, -80);
 					freshbg.frames = Paths.getSparrowAtlas('weeb/bgmonf', 'week6');
 					freshbg.animation.addByPrefix('idle', 'BGFirst', 24);
 					freshbg.animation.play('idle');
@@ -816,7 +816,7 @@ class PlayState extends MusicBeatState
 			case 'monika':
 				dad.x += 250;
 				dad.y += 280;
-				camPos.set(dad.getGraphicMidpoint().x - 90, dad.getGraphicMidpoint().y - 180);
+				camPos.set(dad.getGraphicMidpoint().x + 90, dad.getGraphicMidpoint().y - 180);
 			case 'duet':
 				dad.x += 150;
 				dad.y += 360;
@@ -859,18 +859,18 @@ class PlayState extends MusicBeatState
 				dad.y -= 80;
 			case 'school':
 				boyfriend.x += 90;
-				boyfriend.y -= 10;
+				boyfriend.y += 60;
 				gf.x += 180;
 				gf.y += 350;
 				dad.x += 40;
-				dad.y -= 120;
+				dad.y -= 100;
 			case 'schoolEvil':
 				dad.y -= 69;
 				dad.x += 300;
 				boyfriend.x += 200;
 				boyfriend.y += 260;
 				gf.x += 180;
-				gf.y += 300;
+				gf.y += 330;
 		}
 
 		add(gf);
