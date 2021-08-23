@@ -404,11 +404,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHTmiss', 'Miss Right', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'Miss Down', 24, false);
 
-				addOffset('idle', -40, 105);
-				addOffset("singUP", 87, 184);
-				addOffset("singRIGHT", -112, -56);
-				addOffset("singLEFT", 54, 129);
-				addOffset("singDOWN", -66, -46);
+				addOffset('idle', 50, 105);
+				addOffset("singUP", 177, 184);
+				addOffset("singRIGHT", -22, -56);
+				addOffset("singLEFT", 144, 129);
+				addOffset("singDOWN", 24, -46);
 				addOffset("singUPmiss", 87, 204);
 				addOffset("singRIGHTmiss", -112, -66);
 				addOffset("singLEFTmiss", 54, 72);
@@ -440,7 +440,7 @@ class Character extends FlxSprite
 					animation.addByPrefix('singDOWNmiss', 'Miss Down', 24, false);
 					animation.addByPrefix('peaceSIGN', 'BF HEY!!', 24, false);
 					animation.addByPrefix('scared', 'BF idle shaking', 24, false);
-				    animation.addByPrefix('Dodge', 'bfdodge', 24, false);
+				    animation.addByPrefix('Dodge', 'bfdodge', 12, true);
 				
 				
 					addOffset("Dodge", 7, 4);

@@ -180,6 +180,7 @@ class PlayState extends MusicBeatState
 	var bottomBoppers:FlxSprite;
 	var santa:FlxSprite;
 	var space:FlxBackdrop;
+	var glitch:FlxSprite;
 	var whiteflash:FlxSprite;
 	var blackScreen:FlxSprite;
 
@@ -659,9 +660,12 @@ class PlayState extends MusicBeatState
 					}
 			}
 			case 'schoolEvil':
+
+			 
+
 			{
 					curStage = 'schoolEvil';
-					defaultCamZoom = 0.58;
+					defaultCamZoom = 0.58; // 0.58
 
 					var posX = 50;
 					var posY = 200;
@@ -688,6 +692,7 @@ class PlayState extends MusicBeatState
 
 				// PHASE 3 BACKGROUND IDLE 
 
+				
 				bigbg = new FlxSprite();
 				bigbg.frames = Paths.getSparrowAtlas('weeb/bgbigmon', 'week6');
 				bigbg.animation.add('idle', [0, 0, 0, 1, 2, 3, 4, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 8, 7, 7, 7, 6, 6, 6, 5, 5, 5, 4, 4, 4, 3, 3, 3], 24, false);
@@ -695,6 +700,14 @@ class PlayState extends MusicBeatState
 				bigbg.setGraphicSize(Std.int(bigbg.width * 1.7));
 
 				add(bigbg);
+
+			    glitch = new FlxSprite(); // * 1.7
+			    glitch.frames = Paths.getSparrowAtlas("demise/bgthirdglitch");
+			    glitch.animation.addByPrefix('bgglitch', "BGThird", 24, true);
+			    glitch.setGraphicSize(Std.int(glitch.width * 1.7));
+				glitch.visible = false;
+				glitch.animation.play('bgglitch', true);
+				add(glitch);
 				
 
 				//	var stageFront:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('weeb/FinaleFG','week6'));
@@ -703,6 +716,7 @@ class PlayState extends MusicBeatState
 				//	stageFront.scrollFactor.set(1, 1);
 				//	add(stageFront);
 			}
+			
 			case 'stage':
 				{
 						defaultCamZoom = 0.9;
@@ -858,7 +872,7 @@ class PlayState extends MusicBeatState
 				boyfriend.x += 320;
 				dad.y -= 80;
 			case 'school':
-				boyfriend.x += 90;
+				boyfriend.x += 210;
 				boyfriend.y += 60;
 				gf.x += 180;
 				gf.y += 350;
@@ -878,7 +892,7 @@ class PlayState extends MusicBeatState
 		// Shitty layering but whatev it works LOL
 		if (curStage == 'limo')
 			add(limo);
-
+		add(glitch);
 		add(dad);
 		add(boyfriend);
 		if (loadRep)
@@ -1971,15 +1985,22 @@ class PlayState extends MusicBeatState
 		if (FlxG.keys.justPressed.SPACE)
 			{
 				if (candodge || !dodgedb){
+
+					boyfriend.playAnim('Dodge');
 					hasdodged = true;
 					candodge = false;
+
 				}
+
 				else if (!candodge){
+
 					dodgedb = true;
 					new FlxTimer().start(3, function(tmr:FlxTimer)
 						{
+
 							dodgedb = false;
-					});
+
+						});
 				}
 			}
 
@@ -3712,6 +3733,24 @@ class PlayState extends MusicBeatState
 		boyfriend.playAnim('scared', true);
 		gf.playAnim('scared', true);
 	}
+
+
+	function loadmonika()
+		{
+			var evilguy:FlxSprite = new FlxSprite(0, 0);
+		evilguy.frames = Paths.getSparrowAtlas('demise/monattack');
+		evilguy.animation.addByPrefix('whatthe', 'BigmonAttack', 24, false);
+		evilguy.antialiasing = true;
+		evilguy.setGraphicSize(Std.int(evilguy.width * 1.2));
+		evilguy.x = dad.x;
+		evilguy.y = dad.y;
+		evilguy.x -= 450;
+		evilguy.y -= 585;
+		add(evilguy);
+		evilguy.animation.play('whatthe');
+		remove(evilguy);
+		}
+
 	function penattack(){
 		var evilguy:FlxSprite = new FlxSprite(0, 0);
 		evilguy.frames = Paths.getSparrowAtlas('demise/monattack');
@@ -3735,10 +3774,7 @@ class PlayState extends MusicBeatState
 					    FlxG.camera.flash(FlxColor.RED, 4);
 						health = 0;
 					}
-				if (hasdodged)
-					{
-						boyfriend.playAnim('Dodge');
-					}
+				
 				new FlxTimer().start(0.4, function(tmr:FlxTimer)
 					{
 						candodge = false;
@@ -3749,6 +3785,23 @@ class PlayState extends MusicBeatState
 				});
 			}
 	}
+
+	
+	function glitchbg()
+		{
+
+			glitch.visible = true;
+
+					new FlxTimer().start(0.5, function(tmr:FlxTimer)
+					{
+		            	glitch.visible = false;
+
+					});
+					
+				}
+			
+		
+		
 	override function stepHit()
 	{
 		super.stepHit();
@@ -3769,6 +3822,12 @@ class PlayState extends MusicBeatState
 			{
 				switch (curStep)
 				{
+					case 1:
+						loadmonika();
+						FlxG.log.add("Monika Loaded");
+						glitchbg();
+						FlxG.log.add("Bg Glitch Loaded");
+
 					case 132:
 						boyfriend.visible = true;
 						dad.visible = true;
@@ -3787,8 +3846,12 @@ class PlayState extends MusicBeatState
 											remove(whiteflash);
 										}
 							});
-					case 803 | 1187 | 1323 | 1339 | 1355 | 1371 | 1387 | 1403 | 1419 | 1434 | 1823:
-						penattack();
+					case 411 | 736 | 1051 | 1279 | 1315:
+						glitchbg();
+					
+					case 803 | 1187 | 1323 | 1339 | 1355 | 1371 | 1387 | 1403 | 1419 | 1434 | 1451 | 1467 | 1483 | 1499 | 1515 | 1531 | 1547 | 1562 | 1823 | 1953 | 2027 | 2075 | 2155 | 2531 | 2546 | 2563 | 2579 | 2715 | 2803 | 2867 | 2931 | 2995 | 3027 | 3059 | 3123 | 3155 | 3259:
+					    penattack();
+						
 					case 3521:
 						FlxG.camera.fade(FlxColor.BLACK, 2, false);
 				}

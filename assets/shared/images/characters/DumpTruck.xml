@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="DumpTruck.png"><SubTexture name="Idle0000" x="0" y="0" width="334" height="334" frameX="0" frameY="0" frameWidth="334" frameHeight="334" />
+<SubTexture name="Idle0001" x="334" y="0" width="334" height="334" frameX="0" frameY="0" frameWidth="334" frameHeight="334" />
+<SubTexture name="Idle0002" x="668" y="0" width="334" height="334" frameX="0" frameY="0" frameWidth="334" frameHeight="334" />
+<SubTexture name="Idle0003" x="1002" y="0" width="334" height="334" frameX="0" frameY="0" frameWidth="334" frameHeight="334" />
+<SubTexture name="Idle0004" x="0" y="334" width="334" height="334" frameX="0" frameY="0" frameWidth="334" frameHeight="334" />
+<SubTexture name="Idle0005" x="334" y="334" width="334" height="334" frameX="0" frameY="0" frameWidth="334" frameHeight="334" />
+<SubTexture name="Idle0006" x="668" y="334" width="334" height="334" frameX="0" frameY="0" frameWidth="334" frameHeight="334" />
+<SubTexture name="Idle0007" x="1002" y="334" width="334" height="334" frameX="0" frameY="0" frameWidth="334" frameHeight="334" />
+</TextureAtlas>
