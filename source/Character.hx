@@ -459,8 +459,7 @@ class Character extends FlxSprite
 					updateHitbox();
 	
 					playAnim('idle');
-	--
-	=
+
 					width -= 100;
 					height -= 100;
 	
