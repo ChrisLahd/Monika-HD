@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bgmons.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BGFirst0000" x="0" y="0" width="773" height="488"/>
+	<SubTexture name="BGFirst0001" x="773" y="0" width="773" height="488"/>
+	<SubTexture name="BGFirst0002" x="1546" y="0" width="773" height="488"/>
+	<SubTexture name="BGFirst0003" x="2319" y="0" width="773" height="488"/>
+	<SubTexture name="BGFirst0004" x="3092" y="0" width="773" height="488"/>
+	<SubTexture name="BGFirst0005" x="0" y="488" width="773" height="488"/>
+	<SubTexture name="BGFirst0006" x="773" y="488" width="773" height="488"/>
+	<SubTexture name="BGFirst0007" x="1546" y="488" width="773" height="488"/>
+	<SubTexture name="BGFirst0008" x="2319" y="488" width="773" height="488"/>
+	<SubTexture name="BGFirst0009" x="3092" y="488" width="773" height="488"/>
+	<SubTexture name="BGFirst0010" x="0" y="976" width="773" height="488"/>
+	<SubTexture name="BGFirst0011" x="773" y="976" width="773" height="488"/>
+	<SubTexture name="BGFirst0012" x="1546" y="976" width="773" height="488"/>
+	<SubTexture name="BGFirst0013" x="2319" y="976" width="773" height="488"/>
+	<SubTexture name="BGFirst0014" x="3092" y="976" width="773" height="488"/>
+	<SubTexture name="BGFirst0015" x="0" y="1464" width="773" height="488"/>
+	<SubTexture name="BGFirst0016" x="773" y="1464" width="773" height="488"/>
+	<SubTexture name="BGFirst0017" x="1546" y="1464" width="773" height="488"/>
+	<SubTexture name="BGFirst0018" x="2319" y="1464" width="773" height="488"/>
+	<SubTexture name="BGFirst0019" x="3092" y="1464" width="773" height="488"/>
+	<SubTexture name="BGFirst0020" x="0" y="1952" width="773" height="488"/>
+	<SubTexture name="BGFirst0021" x="773" y="1952" width="773" height="488"/>
+	<SubTexture name="BGFirst0022" x="1546" y="1952" width="773" height="488"/>
+	<SubTexture name="BGFirst0023" x="2319" y="1952" width="773" height="488"/>
+	<SubTexture name="BGFirst0024" x="3092" y="1952" width="773" height="488"/>
+	<SubTexture name="BGFirst0025" x="0" y="2440" width="773" height="488"/>
+	<SubTexture name="BGFirst0026" x="773" y="2440" width="773" height="488"/>
+	<SubTexture name="BGFirst0027" x="1546" y="2440" width="773" height="488"/>
+	<SubTexture name="BGFirst0028" x="2319" y="2440" width="773" height="488"/>
+	<SubTexture name="BGFirst0029" x="3092" y="2440" width="773" height="488"/>
+	<SubTexture name="BGFirst0030" x="0" y="2928" width="773" height="488"/>
+	<SubTexture name="BGFirst0031" x="773" y="2928" width="773" height="488"/>
+	<SubTexture name="BGFirst0032" x="1546" y="2928" width="773" height="488"/>
+	<SubTexture name="BGFirst0033" x="2319" y="2928" width="773" height="488"/>
+	<SubTexture name="BGFirst0034" x="3092" y="2928" width="773" height="488"/>
+	<SubTexture name="BGFirst0035" x="0" y="3416" width="773" height="488"/>
+	<SubTexture name="BGFirst0036" x="773" y="3416" width="773" height="488"/>
+	<SubTexture name="BGFirst0037" x="1546" y="3416" width="773" height="488"/>
+	<SubTexture name="BGFirst0038" x="2319" y="3416" width="773" height="488"/>
+	<SubTexture name="BGFirst0039" x="3092" y="3416" width="773" height="488"/>
+</TextureAtlas>

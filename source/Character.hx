@@ -651,38 +651,39 @@ class Character extends FlxSprite
 			
 				//Duet_Assets
 			case 'duet':
-				frames = Paths.getSparrowAtlas('characters/Duet_Assets');
-				animation.addByPrefix('idle', 'Duet Idle', 24, false);
-				animation.addByPrefix('singUP', 'Duet Monika UP NOTE', 24, false);
-				animation.addByPrefix('singLEFT', 'Duet Monika LEFT NOTE', 24, false);
-				animation.addByPrefix('singRIGHT', 'Duet Monika RIGHT NOTE', 24, false);
-				animation.addByPrefix('singDOWN', 'Duet Monika DOWN NOTE', 24, false);
+				frames = Paths.getSparrowAtlas('characters/monsen');
+				animation.addByPrefix('idle', 'Idle', 24, false);
+				animation.addByPrefix('singUP', 'MonUp', 24, false);
+				animation.addByPrefix('singLEFT', 'MonLeft', 24, false);
+				animation.addByPrefix('singRIGHT', 'MonRight', 24, false);
+				animation.addByPrefix('singDOWN', 'MonDown', 24, false);
 
-				animation.addByPrefix('singUP-alt', 'Duet Senpai UP NOTE', 24, false);
-				animation.addByPrefix('singDOWN-alt', 'Duet Senpai DOWN NOTE', 24, false);
-				animation.addByPrefix('singLEFT-alt', 'Duet Senpai LEFT NOTE', 24, false);
-				animation.addByPrefix('singRIGHT-alt', 'Duet Senpai RIGHT NOTE', 24, false);
+				animation.addByPrefix('singUP-alt', 'SenMUp', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'SenMDown', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'SenMLeft', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'SenMRight', 24, false);
 
-				animation.addByPrefix('cutsceneidle', 'cutscene idle', 24, false);
-				animation.addByPrefix('cutscenetransition', 'cutscene transition', 24, false);
+				animation.addByPrefix('cutsceneidle', 'Standing', 24, false);
+				animation.addByPrefix('cutscenetransition', 'Standing', 24, false);
 
-				addOffset('idle');
-				addOffset("singUP");
-				addOffset("singRIGHT");
-				addOffset("singLEFT");
-				addOffset("singDOWN");
+				addOffset('idle', 200, 320);
+				addOffset("singUP", 200, 357);
+				addOffset("singRIGHT", 200, 350);
+				addOffset("singLEFT", 200, 350);
+				addOffset("singDOWN", 204, 350);
 
-				addOffset("singUP-alt");
-				addOffset("singRIGHT-alt");
-				addOffset("singLEFT-alt");
-				addOffset("singDOWN-alt");
+				addOffset("singUP-alt", 200, 357);
+				addOffset("singRIGHT-alt", 200, 350);
+				addOffset("singLEFT-alt", 200, 350);
+				addOffset("singDOWN-alt", 204, 350);
 
-				addOffset("cutsceneidle");
-				addOffset("cutscenetransition");
+				addOffset("cutsceneidle", 200, 120);
+				addOffset("cutscenetransition", 200, 120);
 
 				playAnim('idle');
 
-				setGraphicSize(Std.int(width * 6));
+				setGraphicSize(Std.int(width * 0.7));
+				setGraphicSize(Std.int(height * 0.7));
 				updateHitbox();
 
 				antialiasing = false;

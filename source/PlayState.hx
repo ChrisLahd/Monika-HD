@@ -647,16 +647,15 @@ class PlayState extends MusicBeatState
 
 					if (SONG.song.toLowerCase() == "bara no yume")
 					{
-						bgGirls = new BackgroundGirls(-600, 190);
-						bgGirls.scrollFactor.set(0.9, 0.9);
-			
-						bgGirls.setGraphicSize(Std.int(bgGirls.width * daPixelZoom));
-						bgGirls.updateHitbox();
-						if(FlxG.save.data.distractions)
-							{
-								add(bgGirls);
-								bgGirls.dance();
-							}
+						remove(freshbg);
+						var angybg:FlxSprite = new FlxSprite(-90, -80);
+						angybg.frames = Paths.getSparrowAtlas("weeb/bgmons", 'week6');
+						angybg.animation.addByPrefix('bgdance', 'BGFirst', 24, true);
+						angybg.animation.play('bgdance');
+						add(angybg);
+
+						angybg.setGraphicSize(Std.int(angybg.width * 2.7));
+						angybg.updateHitbox();
 					}
 			}
 			case 'schoolEvil':
@@ -832,9 +831,9 @@ class PlayState extends MusicBeatState
 				dad.y += 280;
 				camPos.set(dad.getGraphicMidpoint().x + 90, dad.getGraphicMidpoint().y - 180);
 			case 'duet':
-				dad.x += 150;
-				dad.y += 360;
-				camPos.set(dad.getGraphicMidpoint().x + 800, dad.getGraphicMidpoint().y + 30);
+				dad.x += 360;
+				dad.y += 570;
+				camPos.set(dad.getGraphicMidpoint().x + 90, dad.getGraphicMidpoint().y - 390);
 			case 'monika-angry':
 				dad.x += 15;
 				dad.y += 360;
@@ -907,7 +906,7 @@ class PlayState extends MusicBeatState
 		}
 
 		var doof:DialogueBox = new DialogueBox(false, dialogue);
-		// doof.x += 70;
+		 doof.x += 70;
 		// doof.y = FlxG.height * 0.5;
 		doof.scrollFactor.set();
 		doof.finishThing = startCountdown;
@@ -1347,11 +1346,11 @@ class PlayState extends MusicBeatState
 
 	function schoolIntro(?dialogueBox:DialogueBox):Void
 	{
-		var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
+		var black:FlxSprite = new FlxSprite().makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
 		black.scrollFactor.set();
 		add(black);
 
-		var red:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFFff1b31);
+		var red:FlxSprite = new FlxSprite().makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFFff1b31);
 		red.scrollFactor.set();
 
 
@@ -3953,9 +3952,7 @@ class PlayState extends MusicBeatState
 				dad.playAnim('cheer', true);
 			}
 
-		if (SONG.song.toLowerCase() == "bara no yume")
-			bgGirls.dance();
-
+			
 		if (SONG.song.toLowerCase() == "your demise")
 			bigbg.animation.play('idle', false);
 
