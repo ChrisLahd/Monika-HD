@@ -1155,6 +1155,7 @@ class PlayState extends MusicBeatState
 		schoolFakeout.animation.play('idle');
 		schoolFakeout.scrollFactor.set(0.8, 0.9);
 		schoolFakeout.scale.set(6, 6);
+		schoolFakeout.setGraphicSize(Std.int(schoolFakeout.width * 3));
 		add(schoolFakeout);
 		FlxG.sound.play(Paths.sound('awhellnaw'));	// THEY ON THAT SPUNCHBOB SHIT
 
@@ -1983,26 +1984,20 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.SPACE)
 			{
-				if (candodge || !dodgedb){
-
-					boyfriend.playAnim('Dodge');
+				if (candodge == true || dodgedb == false){
 					hasdodged = true;
 					candodge = false;
+					boyfriend.playAnim('Dodge');
 
 				}
-
-				else if (!candodge){
-
+				else if (candodge == false){
 					dodgedb = true;
-					new FlxTimer().start(3, function(tmr:FlxTimer)
-						{
-
-							dodgedb = false;
-
-						});
-				}
+				new FlxTimer().start(3, function(tmr:FlxTimer)
+					{
+						dodgedb = false;
+				});
 			}
-
+		}
 		if (FlxG.save.data.botplay && FlxG.keys.justPressed.ONE)
 			camHUD.visible = !camHUD.visible;
 
