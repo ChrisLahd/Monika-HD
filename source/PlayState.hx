@@ -3766,6 +3766,22 @@ class PlayState extends MusicBeatState
                     
         }
 
+	function loadmonika()
+		{
+			var evilguy:FlxSprite = new FlxSprite(0, 0);
+		evilguy.frames = Paths.getSparrowAtlas('demise/monattack');
+		evilguy.animation.addByPrefix('whatthe', 'BigmonAttack', 24, false);
+		evilguy.antialiasing = true;
+		evilguy.setGraphicSize(Std.int(evilguy.width * 1.2));
+		evilguy.x = dad.x;
+		evilguy.y = dad.y;
+		evilguy.x -= 450;
+		evilguy.y -= 585;
+		add(evilguy);
+		evilguy.animation.play('whatthe');
+		remove(evilguy);
+		}
+
 	function penattack(){
 		var evilguy:FlxSprite = new FlxSprite(0, 0);
 		evilguy.frames = Paths.getSparrowAtlas('demise/monattack');
@@ -3853,7 +3869,10 @@ class PlayState extends MusicBeatState
 				switch (curStep)
 				{
 					case 1:
+						loadmonika();
+						FlxG.log.add("Monika Loaded");
 						glitchbg();
+<<<<<<< HEAD
 						swapguy();
 						swapguyback();
 						monikaload();
@@ -3863,6 +3882,9 @@ class PlayState extends MusicBeatState
 
 					case 1829:
 						swapguyback();
+=======
+						FlxG.log.add("Bg Glitch Loaded");
+>>>>>>> parent of 6019754 (WHAT THE DOG DOIJNG)
 
 					case 132:
 						boyfriend.visible = true;
