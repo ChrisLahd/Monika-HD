@@ -666,16 +666,16 @@ class Character extends FlxSprite
 				animation.addByPrefix('cutsceneidle', 'Standing', 24, false);
 				animation.addByPrefix('cutscenetransition', 'Standing', 24, false);
 
-				addOffset('idle', 200, 350);
-				addOffset("singUP", 200, 377);
-				addOffset("singRIGHT", 200, 370);
-				addOffset("singLEFT", 200, 370);
-				addOffset("singDOWN", 204, 370);
+				addOffset('idle', 200, 386);
+				addOffset("singUP", 200, 386);
+				addOffset("singRIGHT", 200, 386);
+				addOffset("singLEFT", 200, 386);
+				addOffset("singDOWN", 204, 386);
 
-				addOffset("singUP-alt", 200, 357);
-				addOffset("singRIGHT-alt", 200, 350);
-				addOffset("singLEFT-alt", 200, 350);
-				addOffset("singDOWN-alt", 204, 350);
+				addOffset("singUP-alt", 216, 426);
+				addOffset("singRIGHT-alt", 163, 386);
+				addOffset("singLEFT-alt", 247, 386);
+				addOffset("singDOWN-alt", 212, 386);
 
 				addOffset("cutsceneidle", 200, 350);
 				addOffset("cutscenetransition", 200, 350);
