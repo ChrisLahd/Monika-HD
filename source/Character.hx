@@ -708,6 +708,7 @@ class Character extends FlxSprite
 				updateHitbox();
 
 				antialiasing = true;
+<<<<<<< HEAD
 			case 'monika-angry-glitch':
 				frames = Paths.getSparrowAtlas('characters/bigmonglitch');
 				animation.addByPrefix('idle', 'MonGidle', 24, false);
@@ -728,6 +729,8 @@ class Character extends FlxSprite
 				updateHitbox();
 
 				antialiasing = true;
+=======
+>>>>>>> parent of 7cd5263 (ahaha funny glitch effect (needs to be preloaded)))
 		}
 
 
