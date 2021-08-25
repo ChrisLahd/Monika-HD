@@ -653,10 +653,10 @@ class Character extends FlxSprite
 			case 'duet':
 				frames = Paths.getSparrowAtlas('characters/monsen');
 				animation.addByPrefix('idle', 'Idle', 24, false);
-				animation.addByPrefix('singUP', 'MonUp', 12, false);
-				animation.addByPrefix('singLEFT', 'MonLeft', 12, false);
-				animation.addByPrefix('singRIGHT', 'MonRight', 12, false);
-				animation.addByPrefix('singDOWN', 'MonDown', 12, false);
+				animation.addByPrefix('singUP', 'MonUp', 11, false);
+				animation.addByPrefix('singLEFT', 'MonLeft', 11, false);
+				animation.addByPrefix('singRIGHT', 'MonRight', 11, false);
+				animation.addByPrefix('singDOWN', 'MonDown', 11, false);
 
 				animation.addByPrefix('singUP-alt', 'SenMUp', 12, false);
 				animation.addByPrefix('singDOWN-alt', 'SenMDown', 12, false);
@@ -672,12 +672,12 @@ class Character extends FlxSprite
 				addOffset("singLEFT", 200, 386);
 				addOffset("singDOWN", 204, 386);
 
-				addOffset("singUP-alt", 216, 426);
-				addOffset("singRIGHT-alt", 163, 386);
-				addOffset("singLEFT-alt", 247, 386);
-				addOffset("singDOWN-alt", 212, 386);
+				addOffset("singUP-alt", 196, 426);
+				addOffset("singRIGHT-alt", 143, 386);
+				addOffset("singLEFT-alt", 227, 386);
+				addOffset("singDOWN-alt", 192, 386);
 
-				addOffset("cutsceneidle", 200, 350);
+				addOffset("cutsceneidle", 200, 386);
 				addOffset("cutscenetransition", 200, 350);
 
 				playAnim('idle');
@@ -696,11 +696,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'BigmonRight', 12, false);
 				animation.addByPrefix('singDOWN', 'BigmonDown', 12, false);
 
-				addOffset("idle", 500, 530);
-				addOffset("singUP", 530, 530);
-				addOffset("singRIGHT", 380, 475);
-				addOffset("singLEFT", 440, 537);
-				addOffset("singDOWN", 485, 500);
+				addOffset("idle", 500, 320);
+				addOffset("singUP", 530, 320);
+				addOffset("singRIGHT", 380, 265);
+				addOffset("singLEFT", 440, 327);
+				addOffset("singDOWN", 485, 290);
 
 				playAnim('idle');
 
@@ -716,11 +716,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'MonGright', 12, false);
 				animation.addByPrefix('singDOWN', 'MonGdown', 12, false);
 
-				addOffset("idle", 500, 530);
-				addOffset("singUP", 530, 530);
-				addOffset("singRIGHT", 380, 475);
-				addOffset("singLEFT", 440, 537);
-				addOffset("singDOWN", 485, 500);
+				addOffset("idle", 500, 320);
+				addOffset("singUP", 530, 320);
+				addOffset("singRIGHT", 380, 265);
+				addOffset("singLEFT", 440, 327);
+				addOffset("singDOWN", 485, 290);
 
 				playAnim('idle');
 
