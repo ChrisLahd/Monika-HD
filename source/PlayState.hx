@@ -3734,37 +3734,36 @@ class PlayState extends MusicBeatState
 	}
 
 	
-	function swapguy(which:String, guy:String)
+	function swapguy()
         {
             var oldx:Float;
             var oldy:Float;
 
-                switch (which)
-                    {
-                        case "dad":
                             remove(dad);
                             oldx = dad.x;
                             oldy = dad.y; 
-                            dad = new Character(100, 100, guy);
-                            if (guy == 'gf')
-                                {
-                                    dad.x = gf.x;
-                                    dad.y = gf.y;
-                                }
+                            dad = new Character(100, 100, 'monika-angry-glitch');
                             add(dad);
                             dad.x = oldx; 
                             dad.y = oldy;
                             iconP2.animation.curAnim.curFrame = 1;
-                        case "bf":
-                            oldx = boyfriend.x;
-                            oldy = boyfriend.y; 
-                            remove(boyfriend);
-                            boyfriend = new Boyfriend(770, 450, guy);
-                            boyfriend.x = oldx;
-                            boyfriend.y = oldy;
-                            add(boyfriend);
-                            iconP1.animation.curAnim.curFrame = 1;
-                    }
+                    
+        }
+
+       function swapguyback()
+        {
+            var oldx:Float;
+            var oldy:Float;
+
+                            remove(dad);
+                            oldx = dad.x;
+                            oldy = dad.y; 
+                            dad = new Character(100, 100, 'monika-angry');
+                            add(dad);
+                            dad.x = oldx; 
+                            dad.y = oldy;
+                            iconP2.animation.curAnim.curFrame = 1;
+                    
         }
 
 	function penattack(){
@@ -3840,6 +3839,12 @@ class PlayState extends MusicBeatState
 				{
 					case 1:
 						glitchbg();
+
+					case 1318:
+						swapguy();
+
+					case 1829:
+						swapguyback();
 
 					case 132:
 						boyfriend.visible = true;
