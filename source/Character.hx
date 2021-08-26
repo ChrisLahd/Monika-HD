@@ -465,7 +465,6 @@ class Character extends FlxSprite
 					antialiasing = true;
 					flipX = true;
 
-
 			case 'bf-pixel-dead':
 				frames = Paths.getSparrowAtlas('characters/bfPixel');
 				animation.addByPrefix('singUP', "BF Dies pixel", 24, false);
