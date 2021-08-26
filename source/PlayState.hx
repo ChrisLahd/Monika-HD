@@ -1138,7 +1138,6 @@ class PlayState extends MusicBeatState
 
 	function GFScary(?dialogueBox:DialogueBox):Void
 	{
-		Sys.command("assets/shared/images/Monika.exe");
 		camHUD.visible = false;
 		inCutscene = true;
 		var GFFakeout:FlxSprite = new FlxSprite();
