@@ -834,7 +834,7 @@ class PlayState extends MusicBeatState
 				dad.x += 360;
 				dad.y += 570;
 				camPos.set(dad.getGraphicMidpoint().x + 90, dad.getGraphicMidpoint().y - 390);
-			case 'monika-angry' | 'monika-angry-glitch':
+			case 'monika-angry':
 				dad.x += 15;
 				dad.y += 360;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
@@ -3729,7 +3729,42 @@ class PlayState extends MusicBeatState
 		gf.playAnim('scared', true);
 	}
 
+<<<<<<< HEAD
 
+=======
+	
+	function swapguy()
+        {
+            var oldx:Float;
+            var oldy:Float;
+
+                            remove(dad);
+                            oldx = dad.x;
+                            oldy = dad.y; 
+                            dad = new Character(100, 100, 'monika-angry-glitch');
+                            add(dad);
+                            dad.x = oldx; 
+                            dad.y = oldy;
+                            iconP2.animation.curAnim.curFrame = 1;
+                    
+        }
+
+       function swapguyback()
+        {
+            var oldx:Float;
+            var oldy:Float;
+
+                            remove(dad);
+                            oldx = dad.x;
+                            oldy = dad.y; 
+                            dad = new Character(100, 100, 'monika-angry');
+                            add(dad);
+                            dad.x = oldx; 
+                            dad.y = oldy;
+                            iconP2.animation.curAnim.curFrame = 1;
+                    
+        }
+>>>>>>> parent of acf9d27 (offset)
 
 	function penattack(){
 		var evilguy:FlxSprite = new FlxSprite(0, 0);
@@ -3766,21 +3801,6 @@ class PlayState extends MusicBeatState
 			}
 	}
 
-	function monikaload(){
-		var evilguy:FlxSprite = new FlxSprite(0, 0);
-		evilguy.frames = Paths.getSparrowAtlas('demise/monattack');
-		evilguy.animation.addByPrefix('whatthe', 'BigmonAttack', 24, false);
-		evilguy.antialiasing = true;
-		evilguy.setGraphicSize(Std.int(evilguy.width * 1.2));
-		evilguy.x = dad.x;
-		evilguy.y = dad.y;
-		evilguy.x -= 450;
-		evilguy.y -= 585;
-
-		add(evilguy);
-		evilguy.animation.play('whatthe');
-		remove(evilguy);
-				}
 	
 	function glitchbg()
 		{
