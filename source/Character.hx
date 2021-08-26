@@ -463,7 +463,6 @@ class Character extends FlxSprite
 					height -= 100;
 	
 					antialiasing = true;
-	
 					flipX = true;
 
 
