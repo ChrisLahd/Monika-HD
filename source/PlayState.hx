@@ -591,10 +591,6 @@ class PlayState extends MusicBeatState
 				///bgSky.scrollFactor.set(0.1, 0.1);
 				///add(bgSky);
 
-				    var whiteshit:FlxSprite = new FlxSprite(-100, -100).makeGraphic(Std.int(FlxG.width * 5), Std.int(FlxG.height * 5), FlxColor.WHITE);
-					add(whiteshit);
-
-
 					var repositionShit = -200;
 
 				    var freshbg:FlxSprite = new FlxSprite(-90, -80);
