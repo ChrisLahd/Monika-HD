@@ -708,26 +708,6 @@ class Character extends FlxSprite
 				updateHitbox();
 
 				antialiasing = true;
-			case 'monika-angry-glitch':
-				frames = Paths.getSparrowAtlas('characters/bigmonglitch');
-				animation.addByPrefix('idle', 'MonGidle', 24, false);
-				animation.addByPrefix('singUP', 'MonGup', 12, false);
-				animation.addByPrefix('singLEFT', 'MonGleft', 12, false);
-				animation.addByPrefix('singRIGHT', 'MonGright', 12, false);
-				animation.addByPrefix('singDOWN', 'MonGdown', 12, false);
-
-				addOffset("idle", 500, 530);
-				addOffset("singUP", 530, 530);
-				addOffset("singRIGHT", 380, 475);
-				addOffset("singLEFT", 440, 537);
-				addOffset("singDOWN", 485, 500);
-
-				playAnim('idle');
-
-				setGraphicSize(Std.int(width * 1.2));
-				updateHitbox();
-
-				antialiasing = true;
 		}
 
 
