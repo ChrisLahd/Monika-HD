@@ -650,32 +650,40 @@ class Character extends FlxSprite
 			case 'duet':
 				frames = Paths.getSparrowAtlas('characters/monsen');
 				animation.addByPrefix('idle', 'Idle', 24, false);
-				animation.addByPrefix('singUP', 'MonUp', 12, false);
-				animation.addByPrefix('singLEFT', 'MonLeft', 12, false);
-				animation.addByPrefix('singRIGHT', 'MonRight', 12, false);
-				animation.addByPrefix('singDOWN', 'MonDown', 12, false);
+				animation.addByPrefix('singUP', 'MonUp', 24, false);
+				animation.addByPrefix('singLEFT', 'MonLeft', 24, false);
+				animation.addByPrefix('singRIGHT', 'MonRight', 24, false);
+				animation.addByPrefix('singDOWN', 'MonDown', 24, false);
 
-				animation.addByPrefix('singUP-alt', 'SenMUp', 12, false);
-				animation.addByPrefix('singDOWN-alt', 'SenMDown', 12, false);
-				animation.addByPrefix('singLEFT-alt', 'SenMLeft', 12, false);
-				animation.addByPrefix('singRIGHT-alt', 'SenMRight', 12, false);
+				animation.addByPrefix('singUP-alt', 'SenMUp', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'SenMDown', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'SenMLeft', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'SenMRight', 24, false);
 
 				animation.addByPrefix('cutsceneidle', 'Standing', 24, false);
 				animation.addByPrefix('cutscenetransition', 'Standing', 24, false);
 
+<<<<<<< HEAD
 				addOffset('idle', 200, 386);
 				addOffset("singUP", 200, 386);
 				addOffset("singRIGHT", 200, 386);
 				addOffset("singLEFT", 200, 386);
 				addOffset("singDOWN", 204, 386);
+=======
+				addOffset('idle', 200, 320);
+				addOffset("singUP", 200, 357);
+				addOffset("singRIGHT", 200, 350);
+				addOffset("singLEFT", 200, 350);
+				addOffset("singDOWN", 204, 350);
+>>>>>>> parent of 34e13ad (Update Character.hx)
 
 				addOffset("singUP-alt", 216, 426);
 				addOffset("singRIGHT-alt", 163, 386);
 				addOffset("singLEFT-alt", 247, 386);
 				addOffset("singDOWN-alt", 212, 386);
 
-				addOffset("cutsceneidle", 200, 350);
-				addOffset("cutscenetransition", 200, 350);
+				addOffset("cutsceneidle", 200, 120);
+				addOffset("cutscenetransition", 200, 120);
 
 				playAnim('idle');
 
