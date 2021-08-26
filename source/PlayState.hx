@@ -3729,39 +3729,7 @@ class PlayState extends MusicBeatState
 		gf.playAnim('scared', true);
 	}
 
-	
-	function swapguy(which:String, guy:String)
-        {
-            var oldx:Float;
-            var oldy:Float;
 
-                switch (which)
-                    {
-                        case "dad":
-                            remove(dad);
-                            oldx = dad.x;
-                            oldy = dad.y; 
-                            dad = new Character(100, 100, guy);
-                            if (guy == 'gf')
-                                {
-                                    dad.x = gf.x;
-                                    dad.y = gf.y;
-                                }
-                            add(dad);
-                            dad.x = oldx - 150; 
-                            dad.y = oldy - 210;
-                            iconP2.animation.curAnim.curFrame = 1;
-                        case "bf":
-                            oldx = boyfriend.x;
-                            oldy = boyfriend.y; 
-                            remove(boyfriend);
-                            boyfriend = new Boyfriend(770, 450, guy);
-                            boyfriend.x = oldx;
-                            boyfriend.y = oldy;
-                            add(boyfriend);
-                            iconP1.animation.curAnim.curFrame = 1;
-                    }
-        }
 
 	function penattack(){
 		var evilguy:FlxSprite = new FlxSprite(0, 0);
@@ -3853,11 +3821,8 @@ class PlayState extends MusicBeatState
 
 					
 					case 1318:
-						swapguy();
 
 					case 1829:
-						swapguyback();
-						FlxG.log.add("Bg Glitch Loaded");
 
 
 					case 132:
