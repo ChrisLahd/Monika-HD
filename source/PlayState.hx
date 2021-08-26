@@ -3729,42 +3729,6 @@ class PlayState extends MusicBeatState
 		gf.playAnim('scared', true);
 	}
 
-<<<<<<< HEAD
-
-=======
-	
-	function swapguy()
-        {
-            var oldx:Float;
-            var oldy:Float;
-
-                            remove(dad);
-                            oldx = dad.x;
-                            oldy = dad.y; 
-                            dad = new Character(100, 100, 'monika-angry-glitch');
-                            add(dad);
-                            dad.x = oldx; 
-                            dad.y = oldy;
-                            iconP2.animation.curAnim.curFrame = 1;
-                    
-        }
-
-       function swapguyback()
-        {
-            var oldx:Float;
-            var oldy:Float;
-
-                            remove(dad);
-                            oldx = dad.x;
-                            oldy = dad.y; 
-                            dad = new Character(100, 100, 'monika-angry');
-                            add(dad);
-                            dad.x = oldx; 
-                            dad.y = oldy;
-                            iconP2.animation.curAnim.curFrame = 1;
-                    
-        }
->>>>>>> parent of acf9d27 (offset)
 
 	function penattack(){
 		var evilguy:FlxSprite = new FlxSprite(0, 0);
