@@ -444,7 +444,7 @@ class Character extends FlxSprite
 				
 				
 					addOffset("Dodge", 7, 4);
-					addOffset('idle', 100, 100);
+					addOffset('idle', 100, 90);
 					addOffset("singUP", 155, 185);
 					addOffset("singRIGHT", 10, -70);
 					addOffset("singLEFT", 130, 97);
