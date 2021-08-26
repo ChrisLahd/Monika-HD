@@ -597,7 +597,11 @@ class PlayState extends MusicBeatState
 
 					var repositionShit = -200;
 
+<<<<<<< HEAD
 				    var freshbg:FlxSprite = new FlxSprite(-90, -80);
+=======
+				    var freshbg:FlxSprite = new FlxSprite(-70, -90);
+>>>>>>> parent of d40a38d (ill fix offsets later)
 					freshbg.frames = Paths.getSparrowAtlas('weeb/bgmonf', 'week6');
 					freshbg.animation.addByPrefix('idle', 'BGFirst', 24);
 					freshbg.animation.play('idle');
@@ -833,12 +837,21 @@ class PlayState extends MusicBeatState
 			case 'monika':
 				dad.x += 250;
 				dad.y += 280;
+<<<<<<< HEAD
 				camPos.set(dad.getGraphicMidpoint().x + 90, dad.getGraphicMidpoint().y - 180);
 			case 'duet':
 				dad.x += 360;
 				dad.y += 570;
 				camPos.set(dad.getGraphicMidpoint().x + 90, dad.getGraphicMidpoint().y - 390);
 			case 'monika-angry' | 'monika-angry-glitch':
+=======
+				camPos.set(dad.getGraphicMidpoint().x - 90, dad.getGraphicMidpoint().y - 230);
+			case 'duet':
+				dad.x += 150;
+				dad.y += 380;
+				camPos.set(dad.getGraphicMidpoint().x + 800, dad.getGraphicMidpoint().y);
+			case 'monika-angry':
+>>>>>>> parent of d40a38d (ill fix offsets later)
 				dad.x += 15;
 				dad.y += 360;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
@@ -880,7 +893,11 @@ class PlayState extends MusicBeatState
 				gf.x += 180;
 				gf.y += 350;
 				dad.x += 40;
+<<<<<<< HEAD
 				dad.y -= 100;
+=======
+				dad.y += 90;
+>>>>>>> parent of d40a38d (ill fix offsets later)
 			case 'schoolEvil':
 				dad.y -= 69;
 				dad.x += 300;
