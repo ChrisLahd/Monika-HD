@@ -459,6 +459,10 @@ class Character extends FlxSprite
 					updateHitbox();
 	
 					playAnim('idle');
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 8cef2bc (dfdf)
 					width -= 100;
 					height -= 100;
 	
