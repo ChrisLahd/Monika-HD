@@ -459,7 +459,11 @@ class Character extends FlxSprite
 					updateHitbox();
 	
 					playAnim('idle');
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> parent of b4c42c2 (fard)
 					width -= 100;
 					height -= 100;
 	
