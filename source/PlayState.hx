@@ -834,7 +834,7 @@ class PlayState extends MusicBeatState
 				dad.x += 360;
 				dad.y += 570;
 				camPos.set(dad.getGraphicMidpoint().x + 90, dad.getGraphicMidpoint().y - 390);
-			case 'monika-angry':
+			case 'monika-angry' | 'monika-angry-glitch':
 				dad.x += 15;
 				dad.y += 360;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
@@ -1848,7 +1848,7 @@ class PlayState extends MusicBeatState
 							babyArrow.animation.addByPrefix('pressed', 'left press', 24, false);
 							babyArrow.animation.addByPrefix('confirm', 'left confirm', 24, false);
 						case 1:
-							babyArrow.x += Note.swagWidth * 1.5;
+							babyArrow.x += Note.swagWidth * 1;
 							babyArrow.animation.addByPrefix('static', 'arrowDOWN');
 							babyArrow.animation.addByPrefix('pressed', 'down press', 24, false);
 							babyArrow.animation.addByPrefix('confirm', 'down confirm', 24, false);
@@ -1870,7 +1870,7 @@ class PlayState extends MusicBeatState
 
 			if (!isStoryMode)
 			{
-				babyArrow.y -= 1;
+				babyArrow.y -= 10;
 				babyArrow.alpha = 0;
 				FlxTween.tween(babyArrow, {y: babyArrow.y + 10, alpha: 1}, 1, {ease: FlxEase.circOut, startDelay: 0.5 + (0.2 * i)});
 			}
@@ -2626,8 +2626,8 @@ class PlayState extends MusicBeatState
 							if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
 							{
 								spr.centerOffsets();
-								spr.offset.x -= 3;
-								spr.offset.y -= 3;
+								spr.offset.x -= 13;
+								spr.offset.y -= 13;
 							}
 							else
 								spr.centerOffsets();
@@ -3268,7 +3268,7 @@ class PlayState extends MusicBeatState
 							{
 								for (coolNote in possibleNotes)
 								{
-									if (coolNote.noteData == daNote.noteData && Math.abs(daNote.strumTime - coolNote.strumTime) < 50)
+									if (coolNote.noteData == daNote.noteData && Math.abs(daNote.strumTime - coolNote.strumTime) < 10)
 									{ // if it's the same note twice at < 10ms distance, just delete it
 										// EXCEPT u cant delete it in this loop cuz it fucks with the collection lol
 										dumbNotes.push(daNote);
@@ -3406,8 +3406,8 @@ class PlayState extends MusicBeatState
 					if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
 					{
 						spr.centerOffsets();
-						spr.offset.x -= 0;
-						spr.offset.y -= 0;
+						spr.offset.x -= 13;
+						spr.offset.y -= 13;
 					}
 					else
 						spr.centerOffsets();
@@ -3748,8 +3748,8 @@ class PlayState extends MusicBeatState
                                     dad.y = gf.y;
                                 }
                             add(dad);
-                            dad.x = oldx; 
-                            dad.y = oldy;
+                            dad.x = oldx - 150; 
+                            dad.y = oldy - 210;
                             iconP2.animation.curAnim.curFrame = 1;
                         case "bf":
                             oldx = boyfriend.x;
@@ -3783,7 +3783,6 @@ class PlayState extends MusicBeatState
 				camHUD.shake(0.05, 0.2);
 				FlxG.camera.shake(0.05, 0.2);
 				if (!hasdodged){
-					    FlxG.camera.flash(FlxColor.RED, 4);
 						health = 0;
 					}
 				
@@ -3798,6 +3797,21 @@ class PlayState extends MusicBeatState
 			}
 	}
 
+	function monikaload(){
+		var evilguy:FlxSprite = new FlxSprite(0, 0);
+		evilguy.frames = Paths.getSparrowAtlas('demise/monattack');
+		evilguy.animation.addByPrefix('whatthe', 'BigmonAttack', 24, false);
+		evilguy.antialiasing = true;
+		evilguy.setGraphicSize(Std.int(evilguy.width * 1.2));
+		evilguy.x = dad.x;
+		evilguy.y = dad.y;
+		evilguy.x -= 450;
+		evilguy.y -= 585;
+
+		add(evilguy);
+		evilguy.animation.play('whatthe');
+		remove(evilguy);
+				}
 	
 	function glitchbg()
 		{
@@ -3836,6 +3850,15 @@ class PlayState extends MusicBeatState
 				{
 					case 1:
 						glitchbg();
+
+					
+					case 1318:
+						swapguy();
+
+					case 1829:
+						swapguyback();
+						FlxG.log.add("Bg Glitch Loaded");
+
 
 					case 132:
 						boyfriend.visible = true;
